@@ -16,7 +16,7 @@ Během semestru se budou psát tři testy, vždy po ukončení daného tématu v
 - 13 týden - Dynamika
 
 
-```{warning}
+```{warning}Varování
 Kromě testů musí student pravidelně docházet. K úspěšnému získání zápočtu musí student napsat alespoň dva testy a řádně omlouvat neúčast na cvičeních.
 ```
 
