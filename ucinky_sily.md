@@ -28,6 +28,7 @@ Silové působení můžeme rozdělit tři kategorie:
 <p align="center">
     <img src="obrazky/prednaska02/typy_sil.png" alt="typy silového působení" width="500"/>
 </p>
+
 Liniové zatížení (obrázek vlevo) si lze představit jako zatížení přes hranu. Celková síla od liniového zatížení je pak dána jako integrál přes funkci zatížení $\overrightarrow{q}$:
 
 $$
