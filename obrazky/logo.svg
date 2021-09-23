@@ -39,12 +39,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.383055;stroke-linejoin:bevel"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.268508;stroke-linejoin:bevel"
        id="rect12080"
-       width="106.35992"
-       height="37.094307"
-       x="32.724411"
-       y="88.910126" />
+       width="64.904816"
+       height="29.86775"
+       x="32.682667"
+       y="96.178429" />
     <text
        xml:space="preserve"
        style="font-size:28.3631px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';word-spacing:0px;stroke-width:0.886344"
@@ -56,16 +56,5 @@
          style="font-size:28.3631px;fill:#f57900;stroke-width:0.886344"
          x="35.240742"
          y="122.57303">TME</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:9.45434px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';word-spacing:0px;stroke-width:0.886344"
-       x="35.185356"
-       y="97.504074"
-       id="text5592"><tspan
-         sodipodi:role="line"
-         id="tspan5590"
-         style="font-size:9.45434px;stroke-width:0.886344"
-         x="35.185356"
-         y="97.504074">Technická mechanika</tspan></text>
   </g>
 </svg>
