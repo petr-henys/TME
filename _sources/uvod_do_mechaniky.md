@@ -39,6 +39,22 @@ Nejpozději přišla dynamika, tehdy když bylo možné měřit přesněji čas.
 </p>
 
 ## Základní pojmy v mechanice
+Nejdříve si defimujme prostor:
+<p align="center">
+    <img src="obrazky/prednaska01/prostor.png" alt="soustava hmotných bodů" width="300"/>
+</p>
+
+```{note}
+jako trojrozměrný, spojitý, izotropní, euklidovský, inerciální a absolutní
+```
+
+Následuje pojem síly definované jako
+```{note}
+fiktivní veličina popisující faktickou interakci těles
+```
+<p align="center">
+    <img src="obrazky/prednaska01/sila.png" alt="soustava hmotných bodů" width="400"/>
+</p>
 
 Důležitou veličinou je čas, který můžeme definovat jako:
 ```{note}
