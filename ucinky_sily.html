@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Technické mechanika</title>
+    <title>Účinky síly &#8212; Technické mechanika</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,8 +42,16 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Úvod do mechaniky a její rozdělení" href="uvod_do_mechaniky.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -80,14 +88,14 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uvod_do_mechaniky.html">
    Úvod do mechaniky a její rozdělení
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ucinky_sily.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Účinky síly
   </a>
  </li>
@@ -124,6 +132,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ucinky_sily.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -135,7 +160,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://petr-henys.github.io/TME/uvod.html/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://petr-henys.github.io/TME/uvod.html/issues/new?title=Issue%20on%20page%20%2Fucinky_sily.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -156,6 +181,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#koncept-sily">
+   Koncept síly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rozdeleni-siloveho-pusobeni">
+   Rozdělení silového působení
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otacive-ucinky-sily">
+   Otáčivé účinky síly
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -164,13 +212,71 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="ucinky-sily">
+<h1>Účinky síly<a class="headerlink" href="#ucinky-sily" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="koncept-sily">
+<h2>Koncept síly<a class="headerlink" href="#koncept-sily" title="Permalink to this headline">¶</a></h2>
+<p>Síla je projevem interakce dvou těles nebo působení setrvačných a gravitačních účinků na těleso. Sílu rozdělíme na:</p>
+<ul class="simple">
+<li><p>statickou: nemění pohybový stav tělesa, tj. všechny síly jsou v rovnováze</p></li>
+<li><p>dynamicou: změna pohybového stavu tělese, vyjádřitelnou 2 Newtonovým zákonem:</p></li>
+</ul>
+<p>$$
+\overrightarrow{F} = \frac{d(m\overrightarrow{v})}{dt}
+$$
+Zaveďme vhodný matematický popis. Uvažujme sílu jako vektor v kártézských souřadnicích:</p>
+<p align="center">
+    <img src="obrazky/prednaska02/definice_sily.png" alt="definice síly" width="300"/>
+</p>
+<p>Sílu můžeme rozložit do směru souřadnic na složky (tohoto rozkladu budeme dále hojně využívat). Velikost vektoru pak lze snadno spočítat:</p>
+<p>$$
+F=\lVert\overrightarrow{F}\rVert=\sqrt{F_{x}^{2} + F_{y}^{2} + F_{z}^{2}}
+$$</p>
+<p>Síla je orientovaný vektor, leží na přímce a prochází bodem (nebo působištěm).</p>
+</div>
+<div class="section" id="rozdeleni-siloveho-pusobeni">
+<h2>Rozdělení silového působení<a class="headerlink" href="#rozdeleni-siloveho-pusobeni" title="Permalink to this headline">¶</a></h2>
+<p>Silové působení můžeme rozdělit tři kategorie:</p>
+<p align="center">
+    <img src="obrazky/prednaska02/typy_sil.png" alt="typy silového působení" width="500"/>
+</p>
+Liniové zatížení (obrázek vlevo) si lze představit jako zatížení přes hranu. Celková síla od liniového zatížení je pak dána jako integrál přes funkci zatížení $\overrightarrow{q}$:
+<p>$$
+\overrightarrow{F} = \int_{l}\overrightarrow{q}dl
+$$</p>
+<p>Podobně platí i pro výpočet síly, která je dána plošnou intenzitou $\overrightarrow{p}$:</p>
+<p>$$
+\overrightarrow{F} = \int_{S}\overrightarrow{p}ds
+$$</p>
+<p>A nakonec objemové síly, dané například gravitací lze formulovat:</p>
+<p>$$
+\overrightarrow{F} = \int_{V}\rho\overrightarrow{g}dV
+$$</p>
+</div>
+<div class="section" id="otacive-ucinky-sily">
+<h2>Otáčivé účinky síly<a class="headerlink" href="#otacive-ucinky-sily" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -181,6 +287,15 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="uvod_do_mechaniky.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Úvod do mechaniky a její rozdělení</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
