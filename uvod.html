@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pravidla &#8212; Kurz technické mechaniky</title>
+    <title>Úvod &#8212; Kurz technické mechaniky</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Úvod" href="intro.html" />
+    <link rel="next" title="Úvod do mechaniky a její rozdělení" href="uvod_do_mechaniky.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,16 +82,16 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
    Úvod
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Pravidla
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="uvod_do_mechaniky.html">
+   Úvod do mechaniky a její rozdělení
   </a>
  </li>
 </ul>
@@ -135,7 +135,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/pravidla.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/uvod.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -155,7 +155,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpravidla.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fuvod.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -176,6 +176,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pravidla-pro-udeleni-zapoctu">
+   Pravidla pro udělení zápočtu
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pravidla-pro-uspesne-absolvovani-zkousky">
+   Pravidla pro úspěšné absolvování zkoušky
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#literatura">
+   Literatura
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -184,9 +207,52 @@
         
               <div>
                 
-  <div class="section" id="pravidla">
-<h1>Pravidla<a class="headerlink" href="#pravidla" title="Permalink to this headline">¶</a></h1>
-<p>Vítejte na stránkách kurzu základní mechaniky pro mechatroniky.</p>
+  <div class="section" id="uvod">
+<h1>Úvod<a class="headerlink" href="#uvod" title="Permalink to this headline">¶</a></h1>
+<p>Vítejte na stránkách kurzu základní mechaniky pro mechatroniky. Tento kurz seznamuje studenty s teoretickými základy Newtonovské/Lagrangeovské mechaniky. Po absolvování tohoto kurzu by měl být student schopen analyzovat samostatně běžné technické problémy.</p>
+<p>Přednášky vede Petr Henyš:</p>
+<ul class="simple">
+<li><p>tel: +42048535 3238</p></li>
+<li><p>email: <a class="reference external" href="mailto:petr&#46;henys&#37;&#52;&#48;tul&#46;cz">petr<span>&#46;</span>henys<span>&#64;</span>tul<span>&#46;</span>cz</a></p></li>
+<li><p>konzultační hodiny: po domluvě</p></li>
+<li><p>kancelář: budova A, A04031</p></li>
+</ul>
+<p>Cvičení akademický rok 2021/2022 vede Václav Vomáčko a Jakub Macháček.</p>
+<div class="section" id="pravidla-pro-udeleni-zapoctu">
+<h2>Pravidla pro udělení zápočtu<a class="headerlink" href="#pravidla-pro-udeleni-zapoctu" title="Permalink to this headline">¶</a></h2>
+<p>Během semestru se budou psát tři testy, vždy po ukončení daného tématu v následujících týdnech:</p>
+<ul class="simple">
+<li><p>5 týden - Statika</p></li>
+<li><p>9 týden - Kinematika</p></li>
+<li><p>13 týden - Dynamika</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Kromě testů musí student pravidelně docházet. K úspěšnému získání zápočtu musí student napsat alespoň dva testy a řádně omlouvat neúčast na cvičeních.</p>
+</div>
+</div>
+<div class="section" id="pravidla-pro-uspesne-absolvovani-zkousky">
+<h2>Pravidla pro úspěšné absolvování zkoušky<a class="headerlink" href="#pravidla-pro-uspesne-absolvovani-zkousky" title="Permalink to this headline">¶</a></h2>
+<p>Zkouška se skládá z:</p>
+<ul class="simple">
+<li><p>písemné části: 4 příklady + 5 teoretických otázek. Test je bodován, student může dosáhnout až 20 bodů, avšak pro splnění zkoušky potřebuje minimálně 10 bodů.</p></li>
+<li><p>ústní část: Pokud student úspěšně napíše test mezi 1 až -1, musí absolvovat ústní zkoušku. V případě, pokud student není spokojen se známou z testu (2 až 3-), může požádat o ústní zkoušku. Ústní zkouška může studentovi známku zlepšit/zhoršit až o jeden stupeň.</p></li>
+</ul>
+</div>
+<div class="section" id="literatura">
+<h2>Literatura<a class="headerlink" href="#literatura" title="Permalink to this headline">¶</a></h2>
+<p>Ke studiu mechaniky je doporučena následující literatura:</p>
+<ul class="simple">
+<li><p>Riley, Sturges: Engineering Mechanics – Statics, John Wiley  Sons, 1993</p></li>
+<li><p>Riley, Sturges: Engineering Mechanics – Dynamics, John Wiley &amp; Sons, 1995</p></li>
+<li><p>Jáč, Polcar: Mechanika sv.1 – statika, VŠST, 1982</p></li>
+<li><p>Bradský, Jáč: Mechanika sv. 2 – kinematika, VŠST, 1983</p></li>
+<li><p>Bradský, Vrzala: Mechanika sv. 3 – dynamika, VŠST, 1986</p></li>
+<li><p>Tepřı́k, Brousil, Votýpka: Statika, ČVUT, 1981</p></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -218,15 +284,15 @@
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="intro.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
+     <div id="next">
+        <a class="right-next" href="uvod_do_mechaniky.html" title="next page">
             <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Úvod</p>
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Úvod do mechaniky a její rozdělení</p>
             </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
-    </div>
+     </div>
 
 </div>
         

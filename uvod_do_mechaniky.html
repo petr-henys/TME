@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Úvod &#8212; Kurz technické mechaniky</title>
+    <title>Úvod do mechaniky a její rozdělení &#8212; Kurz technické mechaniky</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Pravidla" href="pravidla.html" />
+    <link rel="prev" title="Úvod" href="uvod.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,16 +82,16 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="uvod.html">
    Úvod
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="pravidla.html">
-   Pravidla
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Úvod do mechaniky a její rozdělení
   </a>
  </li>
 </ul>
@@ -135,7 +135,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/uvod_do_mechaniky.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -155,7 +155,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fuvod_do_mechaniky.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -182,13 +182,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pravidla-pro-udeleni-zapoctu">
-   Pravidla pro udělení zápočtu
+  <a class="reference internal nav-link" href="#vyuziti-mechaniky">
+   Využití mechaniky
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pravidla-pro-uspesne-absolvovani-zkousky">
-   Pravidla pro úspěšné absolvování zkoušky
+  <a class="reference internal nav-link" href="#historie">
+   Historie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zakladni-pojmy-v-mechanice">
+   Základní pojmy v mechanice
   </a>
  </li>
 </ul>
@@ -202,28 +207,78 @@
         
               <div>
                 
-  <div class="section" id="uvod">
-<h1>Úvod<a class="headerlink" href="#uvod" title="Permalink to this headline">¶</a></h1>
-<p>Vítejte na stránkách kurzu základní mechaniky pro mechatroniky. Tento kurz seznamuje studenty s teoretickými základy Newtonovské/Lagrangeovské mechaniky. Po absolvování tohoto kurzu by měl být student schopen analyzovat samostatně běžné technické problémy.</p>
-<div class="section" id="pravidla-pro-udeleni-zapoctu">
-<h2>Pravidla pro udělení zápočtu<a class="headerlink" href="#pravidla-pro-udeleni-zapoctu" title="Permalink to this headline">¶</a></h2>
-<p>Během semestru se budou psát tři testy, vždy po ukončení daného tématu v následujících týdnech:</p>
+  <div class="section" id="uvod-do-mechaniky-a-jeji-rozdeleni">
+<h1>Úvod do mechaniky a její rozdělení<a class="headerlink" href="#uvod-do-mechaniky-a-jeji-rozdeleni" title="Permalink to this headline">¶</a></h1>
+<p>Mechanika je stará displína, která se dělí do mnoha podoborů. Nejjednodušší rozdělení spočívá v rozdělení podle sil, které působí na těleso, tj. rozdělení na:</p>
 <ul class="simple">
-<li><p>5 týden - Statika</p></li>
-<li><p>9 týden - Kinematika</p></li>
-<li><p>13 týden - Dynamika</p></li>
+<li><p>statiku: na těleso nepůsobí setrvačné síly, čas není potřeba uvažovat</p></li>
+<li><p>kinematiku: zajímají nás trajektorie těleso nehldě na síly, které na něj působí, čas musí být zahrnut</p></li>
+<li><p>dynamiku: uvažujeme setrvačné síly a sledujeme jejich vliv na trajektorii tělesa.</p></li>
 </ul>
-<p>Kromě testů musí student pravidelně docházet. K úspěšnému získání zápočtu musí student napsat alespoň dva testy a řádně omlouvat neáčast na cvičeních.</p>
+<p align="center">
+<img src="obrazky/prednaska01/rozdeleni_mechaniky.png" alt="rozdělení mechaniky" width="600"/>
+</p>
+<p>Kromě tohoto základního rozdělení lze dělit mechaniku podle toho, zda je uvažujeme těleso, které je deformovatelné, nebo zda se jedná o tekutinu. Dalši rozdělení může být podle přístupu, tj. teoretická, kvantová nebo relativistická mechanika. Obor mechaniky je opřený experimentální vědy v kombinaci s pokročilými matematickými aparáty.</p>
+<div class="section" id="vyuziti-mechaniky">
+<h2>Využití mechaniky<a class="headerlink" href="#vyuziti-mechaniky" title="Permalink to this headline">¶</a></h2>
+<p>Pro rychlou představu, letecký průmysl je království mechaniky:letadlo je navrhnuto s těmi nejlepšími poznatky z mechaniky, ať už se jedná o řízení, pevnost draku nebo tah motoru. Zkrátky bez mechaniky by to nelétalo…</p>
+<p align="center">
+<img src="obrazky/prednaska01/mechanika_letadlo.png" alt="rozdělení mechaniky" width="600"/>
+</p>
 </div>
-<div class="section" id="pravidla-pro-uspesne-absolvovani-zkousky">
-<h2>Pravidla pro úspěšné absolvování zkoušky<a class="headerlink" href="#pravidla-pro-uspesne-absolvovani-zkousky" title="Permalink to this headline">¶</a></h2>
-<p>Zkouška se skládá z:</p>
+<div class="section" id="historie">
+<h2>Historie<a class="headerlink" href="#historie" title="Permalink to this headline">¶</a></h2>
+<p>Mechanika je stará. První zmínky jdou v ruku v ruce s porvnímy civilizacemi:</p>
 <ul class="simple">
-<li><p>písemné části: 4 příklady + 5 teoretických otázek. Test je bodován, student může dosáhnout až 20 bodů, avšak pro splnění zkoušky potřebuje minimálně 10 bodů.</p></li>
-<li><p>ústní část: Pokud student úspěšně napíše test mezi 1 až -1, musí absolvovat ústní zkoušku. V případě, pokud student není spokojen se známou z testu (2 až 3-), může požádat o ústní zkoušku. Ústní zkouška může studentovi známku zlepšit/zhoršit až o jeden stupeň.</p></li>
+<li><p>Egypt (2500 BC): páka, nakloněná rovina, valenı́ po válci</p></li>
+<li><p>Archytas (400 BC): kladka</p></li>
+<li><p>Archimédes (200 BC): vztlak, rovnováha na páce</p></li>
+<li><p>da Vinci (1500 AC): momenty, momentová rovnováha</p></li>
+<li><p>Kopernı́k (1500 AC): planetárnı́ mechanika</p></li>
 </ul>
+<p align="center">
+    <img src="obrazky/prednaska01/historie1.png" alt="historie1" width="200"/>
+</p>
+<p>Nejpozději přišla dynamika, tehdy když bylo možné měřit přesněji čas. Nejznámější průkopníci jsou známé tváře:</p>
+<ul class="simple">
+<li><p>Galileo (1600): kyvadlo</p></li>
+<li><p>Newton (1700): základ klasické mechaniky: teorie gravitace, pohybové zákony</p></li>
+<li><p>Lagrange (1780): formalismus mechanických zákonů, zobecněnı́ na základě energetických úvah</p></li>
+<li><p>Albert Einstein (1905): teorie relativity (speciálnı́, obecná)</p></li>
+<li><p>Planck, Schrodinger, Heisenberg, Dirac (1920): kvantová teorie</p></li>
+</ul>
+<p align="center">
+    <img src="obrazky/prednaska01/historie2.png" alt="historie2" width="200"/>
+</p>
 </div>
-<div class="toctree-wrapper compound">
+<div class="section" id="zakladni-pojmy-v-mechanice">
+<h2>Základní pojmy v mechanice<a class="headerlink" href="#zakladni-pojmy-v-mechanice" title="Permalink to this headline">¶</a></h2>
+<p>Důležitou veličinou je čas, který můžeme definovat jako:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>skalárnı́, spojitá, ve všech bodech prostoru shodná, kladná
+rovnoměrně rostoucı́ veličina, charakterizujı́cı́ současnost a následnost
+jevů v prostoru.</p>
+</div>
+<p>Nejčastěji bude mít jednotky sekundy [s], hodiny [h] označení písmenem “t”. Dalším důležitou veličinou je hmotnost tělesa:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>vlastnost projevu setrvačných a gravitačních sil</p>
+</div>
+<p>Zpravidla v jednotkách [kg].</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Hmotným bodem (HM) budeme uvažovat často abstraktní objekt, který je sice hmotný, ale nemá bodový (tj. nemá nelze na něm definovat míru plochy, objemu…)</p>
+</div>
+<p>Definice hmotného bodu je často používána ve statice nebo kinematice, kde nás zajímá jenom pohyb tělesa nebo síly nebo vnější síly, které na něj působí.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tuhé těleso je soustava hmotných bodů, které během pohybu vzájemně nemění polohu.</p>
+</div>
+<p align="center">
+    <img src="obrazky/prednaska01/soustava_hmotnych_bodu.png" alt="soustava hmotných bodů" width="300"/>
+</p>
+<p>Koncept tuhého tělesa budeme využívat v celé mechanice. Dovoluje se nám zanedbat fakt, že se těleso během pohybu a působení sil na něj, může deformovat.</p>
 </div>
 </div>
 
@@ -256,15 +311,15 @@
 
 <div class='prev-next-bottom'>
     
-     <div id="next">
-        <a class="right-next" href="pravidla.html" title="next page">
+    <div id="prev">
+        <a class="left-prev" href="uvod.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Pravidla</p>
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Úvod</p>
             </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
-     </div>
+    </div>
 
 </div>
         
