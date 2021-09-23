@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -151,22 +153,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://petr-henys.github.io/TME/uvod.html"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://petr-henys.github.io/TME/uvod.html/issues/new?title=Issue%20on%20page%20%2Fucinky_sily.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -221,17 +207,19 @@
 <li><p>statickou: nemění pohybový stav tělesa, tj. všechny síly jsou v rovnováze</p></li>
 <li><p>dynamicou: změna pohybového stavu tělese, vyjádřitelnou 2 Newtonovým zákonem:</p></li>
 </ul>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \overrightarrow{F} = \frac{d(m\overrightarrow{v})}{dt}
-$$
-Zaveďme vhodný matematický popis. Uvažujme sílu jako vektor v kártézských souřadnicích:</p>
+\]</div>
+<p>Zaveďme vhodný matematický popis. Uvažujme sílu jako vektor v kártézských souřadnicích:</p>
 <p align="center">
     <img src="obrazky/prednaska02/definice_sily.png" alt="definice síly" width="300"/>
 </p>
 <p>Sílu můžeme rozložit do směru souřadnic na složky (tohoto rozkladu budeme dále hojně využívat). Velikost vektoru pak lze snadno spočítat:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 F=\lVert\overrightarrow{F}\rVert=\sqrt{F_{x}^{2} + F_{y}^{2} + F_{z}^{2}}
-$$</p>
+\]</div>
 <p>Síla je orientovaný vektor, leží na přímce a prochází bodem (nebo působištěm).</p>
 </div>
 <div class="section" id="rozdeleni-siloveho-pusobeni">
@@ -241,17 +229,20 @@ $$</p>
     <img src="obrazky/prednaska02/typy_sil.png" alt="typy silového působení" width="500"/>
 </p>
 Liniové zatížení (obrázek vlevo) si lze představit jako zatížení přes hranu. Celková síla od liniového zatížení je pak dána jako integrál přes funkci zatížení $\overrightarrow{q}$:
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \overrightarrow{F} = \int_{l}\overrightarrow{q}dl
-$$</p>
-<p>Podobně platí i pro výpočet síly, která je dána plošnou intenzitou $\overrightarrow{p}$:</p>
-<p>$$
+\]</div>
+<p>Podobně platí i pro výpočet síly, která je dána plošnou intenzitou <span class="math notranslate nohighlight">\(\overrightarrow{p}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \overrightarrow{F} = \int_{S}\overrightarrow{p}ds
-$$</p>
+\]</div>
 <p>A nakonec objemové síly, dané například gravitací lze formulovat:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \overrightarrow{F} = \int_{V}\rho\overrightarrow{g}dV
-$$</p>
+\]</div>
 </div>
 <div class="section" id="otacive-ucinky-sily">
 <h2>Otáčivé účinky síly<a class="headerlink" href="#otacive-ucinky-sily" title="Permalink to this headline">¶</a></h2>
