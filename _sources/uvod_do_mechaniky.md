@@ -44,12 +44,13 @@ Nejdříve si defimujme prostor:
     <img src="obrazky/prednaska01/prostor.png" alt="soustava hmotných bodů" width="300"/>
 </p>
 
-```{note} prostor
+```{admonition} prostor
 jako trojrozměrný, spojitý, izotropní, euklidovský, inerciální a absolutní
 ```
 
 Následuje pojem síly definované jako
-```{note} síla
+
+```{admonition} síla
 fiktivní veličina popisující faktickou interakci těles
 ```
 <p align="center">
@@ -57,25 +58,26 @@ fiktivní veličina popisující faktickou interakci těles
 </p>
 
 Důležitou veličinou je čas, který můžeme definovat jako:
-```{note} čas
+
+```{admonition} čas
 skalárnı́, spojitá, ve všech bodech prostoru shodná, kladná
 rovnoměrně rostoucı́ veličina, charakterizujı́cı́ současnost a následnost
 jevů v prostoru.
 ```
 Nejčastěji bude mít jednotky sekundy [s], hodiny [h] označení písmenem "t". Dalším důležitou veličinou je hmotnost tělesa:
 
-```{note} hmotnost
+```{admonition} hmotnost
 vlastnost projevu setrvačných a gravitačních sil
 ```
 Zpravidla v jednotkách [kg]. 
 
-```{note} hmotný bod
+```{admonition} hmotný bod
 Hmotným bodem (HM) budeme uvažovat často abstraktní objekt, který je sice hmotný, ale nemá bodový (tj. nemá nelze na něm definovat míru plochy, objemu...)
 ```
 
 Definice hmotného bodu je často používána ve statice nebo kinematice, kde nás zajímá jenom pohyb tělesa nebo síly nebo vnější síly, které na něj působí.
 
-```{note} tuhé těleso
+```{admonition} tuhé těleso
 Tuhé těleso je soustava hmotných bodů, které během pohybu vzájemně nemění polohu.
 ```
 
