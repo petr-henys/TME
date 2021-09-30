@@ -133,4 +133,4 @@ $$
 
 ## Příklady k procvičení
 
-Na tomto cvičení jsou představeny příkaldy na skládání sil a výpočet momentů. Komentované příklady od Petry Tisovské naleznete [zde](https://owncloud.cesnet.cz/index.php/s/z0uUPe4yCw87KJn)
+Na tomto cvičení jsou představeny příklady na skládání sil a výpočet momentů. Komentované příklady od Petry Tisovské naleznete [zde](https://owncloud.cesnet.cz/index.php/s/z0uUPe4yCw87KJn)
