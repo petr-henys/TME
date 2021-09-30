@@ -86,3 +86,8 @@ Tuhé těleso je soustava hmotných bodů, které během pohybu vzájemně nemě
 </p>
 
 Koncept tuhého tělesa budeme využívat v celé mechanice. Dovoluje se nám zanedbat fakt, že se těleso během pohybu a působení sil na něj, může deformovat.
+
+## Příklady k procvičení
+
+Na prvním cvičení jsou zopakovány základní pojmy z analýzy funkcí, jednoduché integrály a derivace. Komentované příklady od Petry Tisovské naleznete zde:
+[zde](https://owncloud.cesnet.cz/index.php/s/19nHJTmSuuf8cg6)
