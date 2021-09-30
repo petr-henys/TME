@@ -86,7 +86,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uvod.html">
-   Úvod
+   Pravidla v předmětu
   </a>
  </li>
 </ul>
@@ -187,6 +187,16 @@
    Otáčivé účinky síly
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otacove-ucinky-sily-k-ose">
+   Otáčové účinky síly k ose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moment-silove-dvojice">
+   Moment silové dvojice
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -246,6 +256,80 @@ F=\lVert\overrightarrow{F}\rVert=\sqrt{F_{x}^{2} + F_{y}^{2} + F_{z}^{2}}
 </div>
 <div class="section" id="otacive-ucinky-sily">
 <h2>Otáčivé účinky síly<a class="headerlink" href="#otacive-ucinky-sily" title="Permalink to this headline">¶</a></h2>
+<p>Definujme nejdříve sílu <span class="math notranslate nohighlight">\(\overrightarrow{F}\)</span> a její složky <span class="math notranslate nohighlight">\(\{F_x, F_y, F_z\}\)</span> a stejně tak rameno <span class="math notranslate nohighlight">\(\overrightarrow{r}\)</span> a jeho složky <span class="math notranslate nohighlight">\(\{x_r, y_r, z_r\}\)</span>. Síla na <span class="math notranslate nohighlight">\(\overrightarrow{F}\)</span> na rameni <span class="math notranslate nohighlight">\(\overrightarrow{r}\)</span> způsobí otáčivý účinek k bodu <span class="math notranslate nohighlight">\(o\)</span> souřadnicového systému, <span class="math notranslate nohighlight">\(\overrightarrow{M}_{o}\)</span></p>
+<p align="center">
+    <img src="obrazky/prednaska02/moment_bod.png" alt="moment k bodu" width="600"/>
+</p>
+<p>Moment <span class="math notranslate nohighlight">\(\overrightarrow{M}_o\)</span> je vektor, který je kolmý na <span class="math notranslate nohighlight">\(\overrightarrow{r}\)</span> a sílu <span class="math notranslate nohighlight">\(\overrightarrow{F}\)</span> a proto je dán vektorovým součinem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+    \overrightarrow{M}_o = \begin{bmatrix}
+        \overrightarrow{i} &amp; \overrightarrow{j} &amp; \overrightarrow{k} \\
+        x_r &amp; y_r &amp; z_r \\
+        F_x &amp; F_y &amp; F_z
+    \end{bmatrix} = \overrightarrow{i}\begin{bmatrix}
+        y_r &amp; z_r \\
+        F_y &amp; F_z
+    \end{bmatrix} - \overrightarrow{j}\begin{bmatrix}
+        x_r &amp; z_r \\
+        F_x &amp; F_z
+    \end{bmatrix} + \overrightarrow{k}\begin{bmatrix}
+        x_r &amp; y_r \\
+        F_x &amp; F_y
+    \end{bmatrix}
+\end{equation}
+\end{split}\]</div>
+<p>Nutno podotknout, že vektorový součin <span class="math notranslate nohighlight">\(\times\)</span> není komutativní a tedy záleží na pořádí násboení členů!
+Po rozepsání vektorového součinu vidíme</p>
+<div class="math notranslate nohighlight">
+\[
+	\begin{equation}
+		\overrightarrow{M}_o = \overrightarrow{i}(y_r F_z-z_r F_y) + \overrightarrow{j}(z_r F_x - x_r F_z)+\overrightarrow{k}(x_r F_y - y_r F_x)
+	\end{equation}
+\]</div>
+<p>Vhodným zpřeházením pořadí členů, lze získat zápis, který ukazuje, že moment <span class="math notranslate nohighlight">\(\overrightarrow{M}_o\)</span> lze sapsat jako součet dílčích momentů složek síly</p>
+<div class="math notranslate nohighlight">
+\[
+	\begin{equation}
+		\overrightarrow{M}_o = \overrightarrow{r}\times\left( \overrightarrow{F}_x+\overrightarrow{F}_y + \overrightarrow{F}_z \right) = \sum_{i=1}^{i=n}\overrightarrow{M}_{oi}
+	\end{equation}
+\]</div>
+</div>
+<div class="section" id="otacove-ucinky-sily-k-ose">
+<h2>Otáčové účinky síly k ose<a class="headerlink" href="#otacove-ucinky-sily-k-ose" title="Permalink to this headline">¶</a></h2>
+<p>Dalším případem je stanovení otáčivého momentu <span class="math notranslate nohighlight">\(\overrightarrow{M}_e\)</span> k přímce, popsané směrovým vektorem <span class="math notranslate nohighlight">\(\overrightarrow{e}\)</span></p>
+<p align="center">
+    <img src="obrazky/prednaska02/moment_osa.png" alt="moment k ose" width="200"/>
+</p>
+<p>Moment k ose <span class="math notranslate nohighlight">\(\overrightarrow{e}\)</span> je vlastně projekcí <span class="math notranslate nohighlight">\(\overrightarrow{M}_o\)</span> do přímky <span class="math notranslate nohighlight">\(\overrightarrow{e}\)</span>. Jinými slovy, tuto projekci snadno spočítáme pomocí skalárního součinu</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\overrightarrow{M}_e=\underbrace{\left[\left(\overrightarrow{r}\times\overrightarrow{F}\right)\cdot\overrightarrow{e}\right]}_{M_e}\overrightarrow{e}
+\end{equation}
+\]</div>
+</div>
+<div class="section" id="moment-silove-dvojice">
+<h2>Moment silové dvojice<a class="headerlink" href="#moment-silove-dvojice" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujme případ dvou sil <span class="math notranslate nohighlight">\(\overrightarrow{F}_1 = \overrightarrow{F}\)</span> a <span class="math notranslate nohighlight">\(\overrightarrow{F}_2=-\overrightarrow{F}\)</span>. Podle obrázku platí</p>
+<p align="center">
+    <img src="obrazky/prednaska02/momentova_dvojice.png" alt="momentová dvojice" width="300"/>
+</p>
+<p>že vásledný moment <span class="math notranslate nohighlight">\(\overrightarrow{M}_o\)</span> k počátku <span class="math notranslate nohighlight">\(o\)</span> je</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\overrightarrow{M}_o = \overrightarrow{r}_A \times \overrightarrow{F}_1 + \overrightarrow{r}_B \times \overrightarrow{F}_2=\overrightarrow{r}\times\overrightarrow{F}
+\end{equation}
+\]</div>
+<p>Výsledný moment <span class="math notranslate nohighlight">\(M_o\)</span> je stejný po celém tělese, tedy je stejný k libovolnému bodu, protože</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    M_o=rF\sin(\phi)=konstanta!,\ (\overrightarrow{M}_o=\overrightarrow{M}_a)
+\end{equation}
+\]</div>
 </div>
 </div>
 
