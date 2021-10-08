@@ -5,7 +5,7 @@
 Hmotný bod je v rovnováze tehdy, pokud jsou v rovnováze síly, které na něj působí, tedy vektorový součet sil $F$ musí být roven nule
 
 $$
-\overrightarrow{F} = \sum_i \overrightarrow{F}_i
+\overrightarrow{F} = \sum_i \overrightarrow{F}_i = \overrightarrow{0}
 $$
 
 Pro výpočet nejdříve zavedeme vhodný souřadnicový systém. Zpravidla kartézský, ortonormálný. Někdy se může hodit vyjádřit síly v polárním souřadnicovém systému nebo v obecném, libovolném křivočarém.
@@ -23,7 +23,7 @@ Někdy je možné vypozorovat jakýsi typický směr v silách, které působí 
 Rovnováha tuhého tělesa musí zahrnovat i rovnováhu momentů, tedy
 
 $$
-\overrightarrow{M} = \sum_i \overrightarrow{M}_i
+\overrightarrow{M} = \sum_i \overrightarrow{M}_i = \overrightarrow{0}
 $$
 
 Protože těleso má měřitelný tvar, může rotovat díky momentovým účinkům od sil.
