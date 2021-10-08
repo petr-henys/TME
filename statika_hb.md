@@ -13,6 +13,7 @@ Pro výpočet nejdříve zavedeme vhodný souřadnicový systém. Zpravidla kart
 ```{admonition} Poznámka
 Někdy je možné vypozorovat jakýsi typický směr v silách, které působí na těleso a pak je výhodné umístit směr souřadnicového systému tak aby korespondoval se směrem sil. Ulehčíme si tak práci s hledáním úhlů a rozkladem.
 ```
+
 <p align="center">
     <img src="obrazky/prednaska03/statika_HM.png" alt="rovnováha hmotného bodu" width="400"/>
 </p>
@@ -26,9 +27,14 @@ $$
 $$
 
 Protože těleso má měřitelný tvar, může rotovat díky momentovým účinkům od sil.
+
 <p align="center">
     <img src="obrazky/prednaska03/statika_tuhe_teleso.png" alt="rovnováha tuhého tělesa" width="500"/>
 </p>
+
+```{admonition} Poznámka
+Rovnováha momentů musí platit k libovolnému bodu tělesa. Místo, ke kterému počítáme rovnováhu momentů zpravidla vybíráme tak abychom měli co nejmenší počet momentových přízpěvků nebo starostí s hledáním ramena momentů.
+```
 
 Podle počtu pohybů, které hmotný bod nebo těleso může vykonávat v daném souřadnicovém systému, tak mluvíme o stupních volnosti.
 
@@ -36,7 +42,13 @@ Podle počtu pohybů, které hmotný bod nebo těleso může vykonávat v daném
     <img src="obrazky/prednaska03/stupne_volnosti.png" alt="stupně volnosti hmotného bodu a tělesa" width="500"/>
 </p>
 
+
 Hmotný bod ve 2D může vykonávat posuvný pohyb, který lze vyjádřit kombinací pohybu ve směru osy $x$ a a osy $y$. Rotaci není potřeba uvažovat protože bod je bez rozměrný a tak na nem nelze definovat rameno rotace. Podobně platí pro hmotný bod i ve 3D, kde ovažujeme navíc ve stejném duchu souřadnici $z$.
+
+```{admonition} Varování
+:class: warning
+Pro výpočet momentové rovnováhy musí zvolit kladnou směr otáčení, který se nesmí měnit během výpočtu. Zpravidla je kladný směr uvažován proti směru otáčení hodinových ručiček, avšak není to podmínka.
+```
 
 Tuhé těleso má měřitelný rozměr a tak kromě pohybu vyjádřitelného ve třech osách (tj. posuvné stupně volnosti v $x$, $y$ a $z$) musíme uvažovat i obecnou rotaci, kterou lze opět vyjádřit jako kombinaci základních rotací okolo dílčích os ($\phi$, $\xi$ a $\eta$), tedy tří rotačních stupňů volnosti.
 
