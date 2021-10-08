@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pravidla v předmětu &#8212; Technické mechanika</title>
+    <title>Statika hmotného bodu a tuhého tělesa, stupně volnosti &#8212; Technické mechanika</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Úvod do mechaniky a její rozdělení" href="uvod_do_mechaniky.html" />
+    <link rel="prev" title="Účinky síly" href="ucinky_sily.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +84,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="uvod.html">
    Pravidla v předmětu
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uvod_do_mechaniky.html">
    Úvod do mechaniky a její rozdělení
@@ -99,8 +101,8 @@
    Účinky síly
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="statika_hb.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Statika hmotného bodu a tuhého tělesa, stupně volnosti
   </a>
  </li>
@@ -145,7 +147,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/uvod.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/statika_hb.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -176,18 +178,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pravidla-pro-udeleni-zapoctu">
-   Pravidla pro udělení zápočtu
+  <a class="reference internal nav-link" href="#rovnovaha-hmotneho-bodu">
+   Rovnováha hmotného bodu
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pravidla-pro-uspesne-absolvovani-zkousky">
-   Pravidla pro úspěšné absolvování zkoušky
+  <a class="reference internal nav-link" href="#rovnovaha-tuheho-telesa">
+   Rovnováha tuhého tělesa
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#literatura">
-   Literatura
+  <a class="reference internal nav-link" href="#priklady-k-procviceni">
+   Příklady k procvičení
   </a>
  </li>
 </ul>
@@ -201,51 +203,52 @@
         
               <div>
                 
-  <div class="section" id="pravidla-v-predmetu">
-<h1>Pravidla v předmětu<a class="headerlink" href="#pravidla-v-predmetu" title="Permalink to this headline">¶</a></h1>
-<p>Vítejte na stránkách kurzu základní mechaniky pro mechatroniky a studenty programu Aplikovaé vědy v inženýrství (AVI). Tento kurz seznamuje studenty s teoretickými základy Newtonovské/Lagrangeovské mechaniky. Po absolvování tohoto kurzu by měl být student schopen analyzovat samostatně běžné technické problémy.</p>
-<p>Přednášky vede <em>Petr Henyš</em>:</p>
-<ul class="simple">
-<li><p>tel: +42048535 3238</p></li>
-<li><p>email: <a class="reference external" href="mailto:petr&#46;henys&#37;&#52;&#48;tul&#46;cz">petr<span>&#46;</span>henys<span>&#64;</span>tul<span>&#46;</span>cz</a></p></li>
-<li><p>konzultační hodiny: po domluvě</p></li>
-<li><p>kancelář: budova A, A04031</p></li>
-</ul>
-<p>Cvičení akademický rok 2021/2022 vede <em>Václav Vomáčko</em> a <em>Jakub Macháček</em>.</p>
-<div class="section" id="pravidla-pro-udeleni-zapoctu">
-<h2>Pravidla pro udělení zápočtu<a class="headerlink" href="#pravidla-pro-udeleni-zapoctu" title="Permalink to this headline">¶</a></h2>
-<p>Během semestru se budou psát tři testy, vždy po ukončení daného tématu v následujících týdnech:</p>
-<ul class="simple">
-<li><p><strong>5</strong> týden - Statika</p></li>
-<li><p><strong>9</strong> týden - Kinematika</p></li>
-<li><p><strong>13</strong> týden - Dynamika</p></li>
-</ul>
-<div class="warning admonition">
-<p class="admonition-title">Varování</p>
-<p>Kromě testů musí student pravidelně docházet. K úspěšnému získání zápočtu musí student napsat alespoň dva testy a řádně omlouvat neúčast na cvičeních.</p>
+  <div class="section" id="statika-hmotneho-bodu-a-tuheho-telesa-stupne-volnosti">
+<h1>Statika hmotného bodu a tuhého tělesa, stupně volnosti<a class="headerlink" href="#statika-hmotneho-bodu-a-tuheho-telesa-stupne-volnosti" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rovnovaha-hmotneho-bodu">
+<h2>Rovnováha hmotného bodu<a class="headerlink" href="#rovnovaha-hmotneho-bodu" title="Permalink to this headline">¶</a></h2>
+<p>Hmotný bod je v rovnováze tehdy, pokud jsou v rovnováze síly, které na něj působí, tedy vektorový součet sil <span class="math notranslate nohighlight">\(F\)</span> musí být roven nule</p>
+<div class="math notranslate nohighlight">
+\[
+\overrightarrow{F} = \sum_i \overrightarrow{F}_i
+\]</div>
+<p>Pro výpočet nejdříve zavedeme vhodný souřadnicový systém. Zpravidla kartézský, ortonormálný. Někdy se může hodit vyjádřit síly v polárním souřadnicovém systému nebo v obecném, libovolném křivočarém.</p>
+<div class="admonition-poznamka admonition">
+<p class="admonition-title">Poznámka</p>
+<p>Někdy je možné vypozorovat jakýsi typický směr v silách, které působí na těleso a pak je výhodné umístit směr souřadnicového systému tak aby korespondoval se směrem sil. Ulehčíme si tak práci s hledáním úhlů a rozkladem.</p>
 </div>
+<p align="center">
+    <img src="obrazky/prednaska03/statika_HM.png" alt="rovnováha hmotného bodu" width="400"/>
+</p>
 </div>
-<div class="section" id="pravidla-pro-uspesne-absolvovani-zkousky">
-<h2>Pravidla pro úspěšné absolvování zkoušky<a class="headerlink" href="#pravidla-pro-uspesne-absolvovani-zkousky" title="Permalink to this headline">¶</a></h2>
-<p>Zkouška se skládá z:</p>
+<div class="section" id="rovnovaha-tuheho-telesa">
+<h2>Rovnováha tuhého tělesa<a class="headerlink" href="#rovnovaha-tuheho-telesa" title="Permalink to this headline">¶</a></h2>
+<p>Rovnováha tuhého tělesa musí zahrnovat i rovnováhu momentů, tedy</p>
+<div class="math notranslate nohighlight">
+\[
+\overrightarrow{M} = \sum_i \overrightarrow{M}_i
+\]</div>
+<p>Protože těleso má měřitelný tvar, může rotovat díky momentovým účinkům od sil.</p>
+<p align="center">
+    <img src="obrazky/prednaska03/statika_tuhe_teleso.png" alt="rovnováha tuhého tělesa" width="500"/>
+</p>
+<p>Podle počtu pohybů, které hmotný bod nebo těleso může vykonávat v daném souřadnicovém systému, tak mluvíme o stupních volnosti.</p>
+<p align="center">
+    <img src="obrazky/prednaska03/stupne_volnosti.png" alt="stupně volnosti hmotného bodu a tělesa" width="500"/>
+</p>
+<p>Hmotný bod ve 2D může vykonávat posuvný pohyb, který lze vyjádřit kombinací pohybu ve směru osy <span class="math notranslate nohighlight">\(x\)</span> a a osy <span class="math notranslate nohighlight">\(y\)</span>. Rotaci není potřeba uvažovat protože bod je bez rozměrný a tak na nem nelze definovat rameno rotace. Podobně platí pro hmotný bod i ve 3D, kde ovažujeme navíc ve stejném duchu souřadnici <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<p>Tuhé těleso má měřitelný rozměr a tak kromě pohybu vyjádřitelného ve třech osách (tj. posuvné stupně volnosti v <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> a <span class="math notranslate nohighlight">\(z\)</span>) musíme uvažovat i obecnou rotaci, kterou lze opět vyjádřit jako kombinaci základních rotací okolo dílčích os (<span class="math notranslate nohighlight">\(\phi\)</span>, <span class="math notranslate nohighlight">\(\xi\)</span> a <span class="math notranslate nohighlight">\(\eta\)</span>), tedy tří rotačních stupňů volnosti.</p>
+<p>Platí tedy, že počet stupňů volnosti pro:</p>
 <ul class="simple">
-<li><p><strong>písemné části</strong>: 4 příklady + 5 teoretických otázek. Test je bodován, student může dosáhnout až 20 bodů, avšak pro splnění zkoušky potřebuje minimálně <strong>10 bodů</strong>.</p></li>
-<li><p><strong>ústní části</strong>: Pokud student úspěšně napíše test mezi 1 až -1, musí absolvovat ústní zkoušku. V případě, pokud student není spokojen se známou z testu (2 až 3-), může požádat o ústní zkoušku. Ústní zkouška může studentovi známku zlepšit/zhoršit až o jeden stupeň.</p></li>
+<li><p>hmotný bod ve 2D: 2 posuvy</p></li>
+<li><p>hmotný bod ve 3D: 3 posuvy</p></li>
+<li><p>tuhé těleso ve 2D: 3 (2 posuvy + 1 rotace)</p></li>
+<li><p>tuhé těleso ve 3D: 6 (3 posuvy + 3 rotace)</p></li>
 </ul>
 </div>
-<div class="section" id="literatura">
-<h2>Literatura<a class="headerlink" href="#literatura" title="Permalink to this headline">¶</a></h2>
-<p>Ke studiu mechaniky je doporučena následující literatura:</p>
-<ul class="simple">
-<li><p>Riley, Sturges: Engineering Mechanics – Statics, John Wiley  Sons, 1993</p></li>
-<li><p>Riley, Sturges: Engineering Mechanics – Dynamics, John Wiley &amp; Sons, 1995</p></li>
-<li><p>Jáč, Polcar: Mechanika sv.1 – statika, VŠST, 1982</p></li>
-<li><p>Bradský, Jáč: Mechanika sv. 2 – kinematika, VŠST, 1983</p></li>
-<li><p>Bradský, Vrzala: Mechanika sv. 3 – dynamika, VŠST, 1986</p></li>
-<li><p>Tepřı́k, Brousil, Votýpka: Statika, ČVUT, 1981</p></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
+<div class="section" id="priklady-k-procviceni">
+<h2>Příklady k procvičení<a class="headerlink" href="#priklady-k-procviceni" title="Permalink to this headline">¶</a></h2>
+<p>Na třetím cvičení jsou představené příklady na výpočet rovnováhy hmotného bodu. Komentované příklady od Petry Tisovské naleznete <a class="reference external" href="https://owncloud.cesnet.cz/index.php/s/B6rnY54Dp7JOsC2">zde</a>.</p>
 </div>
 </div>
 
@@ -278,15 +281,15 @@
 
 <div class='prev-next-bottom'>
     
-     <div id="next">
-        <a class="right-next" href="uvod_do_mechaniky.html" title="next page">
+    <div id="prev">
+        <a class="left-prev" href="ucinky_sily.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Úvod do mechaniky a její rozdělení</p>
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Účinky síly</p>
             </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
-     </div>
+    </div>
 
 </div>
         

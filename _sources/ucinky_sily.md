@@ -74,7 +74,7 @@ $$
     \end{bmatrix}
 \end{equation}
 $$
-Nutno podotknout, že vektorový součin $\times$ není komutativní a tedy záleží na pořádí násboení členů!
+Nutno podotknout, že vektorový součin $\times$ není komutativní a tedy záleží na pořádí násobení členů!
 Po rozepsání vektorového součinu vidíme
 
 $$
@@ -83,7 +83,7 @@ $$
 	\end{equation}
 $$
 
-Vhodným zpřeházením pořadí členů, lze získat zápis, který ukazuje, že moment $\overrightarrow{M}_o$ lze sapsat jako součet dílčích momentů složek síly
+Vhodným zpřeházením pořadí členů, lze získat zápis, který ukazuje, že moment $\overrightarrow{M}_o$ lze zapsat jako součet dílčích momentů složek síly
 
 $$
 	\begin{equation}
