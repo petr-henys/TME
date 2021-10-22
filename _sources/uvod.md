@@ -35,3 +35,7 @@ Ke studiu mechaniky je doporučena následující literatura:
 - Bradský, Jáč: Mechanika sv. 2 – kinematika, VŠST, 1983
 - Bradský, Vrzala: Mechanika sv. 3 – dynamika, VŠST, 1986
 - Tepřı́k, Brousil, Votýpka: Statika, ČVUT, 1981
+
+## Materiály k přednáškám a cvičení
+
+Materiály slouží pro přípravu, ale zdaleka nejsou vyčerpávající a nezharnují všechny informace z přednášek. Odkaz je [zde](https://owncloud.cesnet.cz/index.php/s/NfsCtTcsZ8NfBCM).
