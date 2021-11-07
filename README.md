@@ -1,1 +1,2 @@
 # TME
+Obsah přednášek předmětu NTI TME. Odkaz na jupyterweb [zde](https://petr-henys.github.io/TME/uvod.html). Web je v přípravné fázi, veškeré připomínky směřujte na autora: petr.henys@tul.cz nebo zkuste vystavit issue na githubu.
