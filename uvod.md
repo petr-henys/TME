@@ -42,6 +42,6 @@ Materiály slouží pro přípravu, ale zdaleka nejsou vyčerpávající a nezha
 
 ## Složitost tématu
 Každé téma je opatřeno barem vyjadřujícím úroveň složitosti:
-- lehké téma: ☕
-- středné těžké téma: ☕☕
-- těžké téma: ☕☕☕
+- lehké téma: ☕ : obvykle vyžaduje jenom dávat pozor na přednášce, případně pozorně prostudovat přednáškové materiály.
+- středné těžké téma: ☕☕ : Téma, které obvykle vyžaduje soustředění na přednášce a k tomu napočítání několika příkladů.
+- těžké téma: ☕☕☕: Nutná pozornost na přednášce, každý krok, kterým si student není jist musí okamžitě konzultovat s vyučujícím. Ke zkoučce je obvykle zapotřebí napočítat příklady a další liteaturu k pochopení dané problematiky.

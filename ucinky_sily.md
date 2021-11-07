@@ -1,4 +1,4 @@
-# Účinky síly
+# Účinky síly (☕) 
 ## Koncept síly
 Síla je projevem interakce dvou těles nebo působení setrvačných a gravitačních účinků na těleso. Sílu rozdělíme na:
 - statickou: nemění pohybový stav tělesa, tj. všechny síly jsou v rovnováze

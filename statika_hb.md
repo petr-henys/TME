@@ -1,4 +1,4 @@
-# Statika hmotného bodu a tuhého tělesa, stupně volnosti
+# Statika hmotného bodu a tuhého tělesa, stupně volnosti (☕)
 
 ## Rovnováha hmotného bodu
 
