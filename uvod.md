@@ -39,3 +39,9 @@ Ke studiu mechaniky je doporučena následující literatura:
 ## Materiály k přednáškám a cvičení
 
 Materiály slouží pro přípravu, ale zdaleka nejsou vyčerpávající a nezharnují všechny informace z přednášek. Odkaz je [zde](https://owncloud.cesnet.cz/index.php/s/NfsCtTcsZ8NfBCM).
+
+## Složitost tématu
+Každé téma je opatřeno barem vyjadřujícím úroveň složitosti:
+- lehké téma: ☕
+- středné těžké téma: ☕☕
+- těžké téma: ☕☕☕
