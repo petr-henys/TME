@@ -1,4 +1,5 @@
-# Úvod do mechaniky a její rozdělení
+# Úvod do mechaniky a její rozdělení (☕)
+
 Mechanika je stará displína, která se dělí do mnoha podoborů. Nejjednodušší rozdělení spočívá v rozdělení podle sil, které působí na těleso, tj. rozdělení na:
 - statiku: na těleso nepůsobí setrvačné síly, čas není potřeba uvažovat
 - kinematiku: zajímají nás trajektorie těleso nehldě na síly, které na něj působí, čas musí být zahrnut
