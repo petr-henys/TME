@@ -287,10 +287,14 @@
 <p>Nejprve uvolníme nosník, zavedeme reakce a určíme PSV.</p>
 <img src="obrazky/prednaska07/priklad01_uvolneni.png" width=400/>
 <p>PSV = 0, protože máme <strong>3</strong> reakce a <strong>3</strong> rovnice rovnováhy (ve 2D), které jsou:</p>
-<p>\begin{align}
-x:&amp; R_{Ax} - F_1\cos(\alpha)=0  \
-y:&amp; R_{Ay} + R_{By} - F_2 - F_1\sin(\alpha)=0  \</p>
-<p>\end{align}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+x:&amp; R_{Ax} - F_1\cos(\alpha)=0  \\
+y:&amp; R_{Ay} + R_{By} - F_2 - F_1\sin(\alpha)=0  \\
+%%\overset{\curvearrowleft}{+M}: &amp; R_{By}(a+b+c)-F_2(a+b) - F_1\sin(\alpha)a=0
+\end{align}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
