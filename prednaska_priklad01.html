@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Příklad 01: VSU nosníku &#8212; Technické mechanika</title>
+    <title>Vnitřní statické účinky &#8212; Technické mechanika</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Statika hmotného bodu a tuhého tělesa, stupně volnosti" href="statika_hb.html" />
+    <link rel="prev" title="Statika hmotného bodu a tuhého tělesa, stupně volnosti (☕)" href="statika_hb.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,22 +93,22 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uvod_do_mechaniky.html">
-   Úvod do mechaniky a její rozdělení
+   Úvod do mechaniky a její rozdělení (☕)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ucinky_sily.html">
-   Účinky síly
+   Účinky síly (☕)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="statika_hb.html">
-   Statika hmotného bodu a tuhého tělesa, stupně volnosti
+   Statika hmotného bodu a tuhého tělesa, stupně volnosti (☕)
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Příklad 01: VSU nosníku
+   Vnitřní statické účinky
   </a>
  </li>
 </ul>
@@ -271,8 +271,8 @@
         
               <div>
                 
-  <div class="section" id="priklad-01-vsu-nosniku">
-<h1>Příklad 01: VSU nosníku<a class="headerlink" href="#priklad-01-vsu-nosniku" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vnitrni-staticke-ucinky">
+<h1>Vnitřní statické účinky<a class="headerlink" href="#vnitrni-staticke-ucinky" title="Permalink to this headline">¶</a></h1>
 <p>Analyzujte průběh tahových/tlakových a střihových sil a ohybového momentu tenkého nosníku prostě podepřeného a zatíženého osamělými silami. Síla <span class="math notranslate nohighlight">\(F_1=500\)</span> N je pod sklonem <span class="math notranslate nohighlight">\(\alpha=45°\)</span>, síla <span class="math notranslate nohighlight">\(F_2=250\)</span> N. Vzdálenosti jsou: <span class="math notranslate nohighlight">\(a=0.2\)</span> m, <span class="math notranslate nohighlight">\(b=0.65\)</span> m a <span class="math notranslate nohighlight">\(c=0.4\)</span> m.
 <img src="file:///home/petr/ownCloud/MEC/moje_prednasky/prednaska07/priklad01_zadani.png" width=400/>
 <strong>Určete:</strong></p>
@@ -282,13 +282,13 @@
 </ul>
 <div class="section" id="reseni">
 <h2>Řešení<a class="headerlink" href="#reseni" title="Permalink to this headline">¶</a></h2>
-<p>Nejprve uvolníme nosník, zavedeme reakce a určíme PSV.
-<img src="file:///home/petr/ownCloud/MEC/moje_prednasky/prednaska07/priklad01_uvolneni.png" width=400/>
-PSV = 0, protože máme <strong>3</strong> reakce a <strong>3</strong> rovnice rovnováhy (ve 2D), které jsou:</p>
+<p>Nejprve uvolníme nosník, zavedeme reakce a určíme PSV.</p>
+<img src="obrazky/prednaska07/priklad01_uvolneni.png" width=400/>
+<p>PSV = 0, protože máme <strong>3</strong> reakce a <strong>3</strong> rovnice rovnováhy (ve 2D), které jsou:</p>
 <p>\begin{align}
-\overrightarrow{x}:&amp; R_{Ax} - F_1\cos(\alpha)=0 \tag{1} \
-y\uparrow:&amp; R_{Ay} + R_{By} - F_2 - F_1\sin(\alpha)=0 \tag{2} \
-\overset{\curvearrowleft}{+M}: &amp; R_{By}(a+b+c)-F_2(a+b) - F_1\sin(\alpha)a=0 \tag{3}
+\overrightarrow{x}:&amp; R_{Ax} - F_1\cos(\alpha)=0  \
+y\uparrow:&amp; R_{Ay} + R_{By} - F_2 - F_1\sin(\alpha)=0  \
+\overset{\curvearrowleft}{+M}: &amp; R_{By}(a+b+c)-F_2(a+b) - F_1\sin(\alpha)a=0
 \end{align}</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -353,10 +353,10 @@ y\uparrow:&amp; R_{Ay} + R_{By} - F_2 - F_1\sin(\alpha)=0 \tag{2} \
 </div>
 <div class="section" id="rez-c-1-x-in-0-a">
 <h3>Řez č.1: <span class="math notranslate nohighlight">\(x\in &lt;0, a&gt;\)</span><a class="headerlink" href="#rez-c-1-x-in-0-a" title="Permalink to this headline">¶</a></h3>
-<img src="file:///home/petr/ownCloud/MEC/moje_prednasky/prednaska07/priklad01_rez1.png" width=120/><p>\begin{align}
-\overrightarrow{x}:&amp; N_1 + R_{Ax}=0\tag{4} \
-y\uparrow:&amp; -Q_1 + R_{Ay}=0 \tag{5} \
-\overset{\curvearrowleft}{+M}: &amp; M_1 - xR_{Ay}=0 \tag{6}
+<img src="obrazky/prednaska07/priklad01_rez1.png" width=120/><p>\begin{align}
+\overrightarrow{x}:&amp; N_1 + R_{Ax}=0 \
+y\uparrow:&amp; -Q_1 + R_{Ay}=0 \
+\overset{\curvearrowleft}{+M}: &amp; M_1 - xR_{Ay}=0
 \end{align}</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -414,10 +414,10 @@ y\uparrow:&amp; -Q_1 + R_{Ay}=0 \tag{5} \
 </div>
 <div class="section" id="rez-c-2-x-in-a-a-b">
 <h3>Řez č.2: <span class="math notranslate nohighlight">\(x\in &lt;a, a+b&gt;\)</span><a class="headerlink" href="#rez-c-2-x-in-a-a-b" title="Permalink to this headline">¶</a></h3>
-<img src="file:///home/petr/ownCloud/MEC/moje_prednasky/prednaska07/priklad01_rez2.png" width=200/><p>\begin{align}
-\overrightarrow{x}:&amp; N_2 + R_{Ax}-F_1\cos(\alpha)=0\tag{7} \
-y\uparrow:&amp; R_{Ay}-Q_2-F_1\sin(\alpha)=0 \tag{8} \
-\overset{\curvearrowleft}{+M}: &amp; M_2 - x R_{Ay} + (x-a)F_1 \sin(\alpha)=0 \tag{9}
+<img src="obrazky/prednaska07/priklad01_rez2.png" width=200/><p>\begin{align}
+\overrightarrow{x}:&amp; N_2 + R_{Ax}-F_1\cos(\alpha)=0 \
+y\uparrow:&amp; R_{Ay}-Q_2-F_1\sin(\alpha)=0 \
+\overset{\curvearrowleft}{+M}: &amp; M_2 - x R_{Ay} + (x-a)F_1 \sin(\alpha)=0
 \end{align}</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -475,10 +475,10 @@ y\uparrow:&amp; R_{Ay}-Q_2-F_1\sin(\alpha)=0 \tag{8} \
 </div>
 <div class="section" id="rez-c-3-x-in-a-b-a-b-c">
 <h3>Řez č.3: <span class="math notranslate nohighlight">\(x\in &lt;a+b, a+b+c&gt;\)</span><a class="headerlink" href="#rez-c-3-x-in-a-b-a-b-c" title="Permalink to this headline">¶</a></h3>
-<img src="file:///home/petr/ownCloud/MEC/moje_prednasky/prednaska07/priklad01_rez3.png" width=330/><p>\begin{align}
-\overrightarrow{x}:&amp; N_3 + R_{Ax}-F_1\cos(\alpha)=0\tag{10} \
-y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \tag{11} \
-\overset{\curvearrowleft}{+M}: &amp; M_3 - x R_{Ay} + (x-a)F_1 \sin(\alpha) + (x-a-b)F_2=0 \tag{12}
+<img src="obrazky/prednaska07/priklad01_rez3.png" width=330/><p>\begin{align}
+\overrightarrow{x}:&amp; N_3 + R_{Ax}-F_1\cos(\alpha)=0 \
+y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \
+\overset{\curvearrowleft}{+M}: &amp; M_3 - x R_{Ay} + (x-a)F_1 \sin(\alpha) + (x-a-b)F_2=0
 \end{align}</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -677,7 +677,7 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \tag{11} \
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Statika hmotného bodu a tuhého tělesa, stupně volnosti</p>
+                <p class="prevnext-title">Statika hmotného bodu a tuhého tělesa, stupně volnosti (☕)</p>
             </div>
         </a>
     </div>
