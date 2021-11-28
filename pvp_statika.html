@@ -238,6 +238,11 @@
    Příklad 02: Rovnováha na kladce
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priklad-03-podepreny-hranol">
+   Příklad 03: Podepřený hranol
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -390,6 +395,79 @@
 \[
 \begin{equation}
     \delta W = (-mg r_1 + F r_2)\delta\alpha=0
+\end{equation}
+\]</div>
+</div>
+<div class="section" id="priklad-03-podepreny-hranol">
+<h2>Příklad 03: Podepřený hranol<a class="headerlink" href="#priklad-03-podepreny-hranol" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujte podepřený hranol, který je zatížení vlastní vahou. Nalezněte sílu <span class="math notranslate nohighlight">\(F\)</span>, tak aby byl hranol v rovnováze.</p>
+<p align="center">
+    <img src="obrazky/prednaska08/cviceni_priklad01.png" alt="hranol" width="600"/>
+</p>
+<p>zaveďme: <span class="math notranslate nohighlight">\(L = a + b\)</span>, <span class="math notranslate nohighlight">\(x_B\)</span>=c + d, <span class="math notranslate nohighlight">\(y_A=\sqrt{\mathrm{L}^2 - x_B^2}\)</span>
+Napišme rovnici vazby mezi pohybem bodu A a B:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    (x_B - \delta x_B)^2 + (y_A + \delta y_A)^2 = L^2 = x_B^2 + y_A^2
+\end{equation}
+\]</div>
+<p><span class="math notranslate nohighlight">\(\delta x_B,\delta y_A\)</span> jsou virtuální posunutí, která jsou na sobě závislá.
+Rozepsáním získáme:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    x_B^2 - 2x_B\delta x_B + \delta x_B^2 + y_A^2 + 2y_A\delta y_A + \delta y_A^2 = x_B^2 + y_A^2
+\end{equation}
+\]</div>
+<p>členy <span class="math notranslate nohighlight">\(\delta x_B^2, \delta y_A^2\)</span> jsou velmi malé a tak je zanedbáme, pak platí, že:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \delta y_A = \frac{x_B}{y_A} \delta x_B
+\end{equation}
+\]</div>
+<p>Podobně platí, že:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta y_G = \frac{1}{2}(y_A + \delta y_A) - \frac{1}{2}y_A = \frac{1}{2}\delta y_A
+\end{equation}
+\]</div>
+<p>S uvažováním (18) pak platí:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta y_G = \frac{1}{2}\frac{x_B}{y_A}\delta x_B
+\end{equation}
+\]</div>
+<p>Virtuální práce musí být nula aby byla tyč v rovnováze:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta W = F_G \delta y_G \cos(180) + F \delta x_B \cos(0) = 0
+\end{equation}
+\]</div>
+<p>Musíme sjednotit virtuální posuv…tedy dosaďme z (20):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta W = (-F_G \frac{1}{2}\frac{x_B}{y_A} + F)\delta x_B = 0
+\end{equation}
+\]</div>
+<p>Pro libovolné nenulové <span class="math notranslate nohighlight">\(\delta x_B\)</span> musí platit, že výraz v závorce je nula!
+Dosadíme za <span class="math notranslate nohighlight">\(L = a + b, x_B = c + d, y_A = \sqrt{L^2 - x_B^2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\delta W = (-F_G \frac{1}{2}\frac{c + d}{\sqrt{(a + b)^2 - (c + d)^2}} + F)\delta x_B = 0
+\end{equation}
+\]</div>
+<p>Výraz v závorce je rovnice rovnováhy, tedy:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    -F_G \frac{1}{2}\frac{c + d}{\sqrt{(a + b)^2 - (c + d)^2}} + F = 0
 \end{equation}
 \]</div>
 </div>

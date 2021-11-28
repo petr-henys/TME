@@ -158,3 +158,86 @@ $$
     \delta W = (-mg r_1 + F r_2)\delta\alpha=0
 \end{equation}
 $$
+## Příklad 03: Podepřený hranol
+
+Uvažujte podepřený hranol, který je zatížení vlastní vahou. Nalezněte sílu $F$, tak aby byl hranol v rovnováze.
+
+<p align="center">
+    <img src="obrazky/prednaska08/cviceni_priklad01.png" alt="hranol" width="600"/>
+</p>
+
+
+zaveďme: $L = a + b$, $x_B$=c + d, $y_A=\sqrt{\mathrm{L}^2 - x_B^2}$
+Napišme rovnici vazby mezi pohybem bodu A a B:
+
+$$
+\begin{equation}
+    (x_B - \delta x_B)^2 + (y_A + \delta y_A)^2 = L^2 = x_B^2 + y_A^2
+\end{equation}
+$$
+
+$\delta x_B,\delta y_A$ jsou virtuální posunutí, která jsou na sobě závislá.
+Rozepsáním získáme:
+
+$$
+\begin{equation}
+    x_B^2 - 2x_B\delta x_B + \delta x_B^2 + y_A^2 + 2y_A\delta y_A + \delta y_A^2 = x_B^2 + y_A^2
+\end{equation}
+$$
+
+členy $\delta x_B^2, \delta y_A^2$ jsou velmi malé a tak je zanedbáme, pak platí, že:
+
+$$
+\begin{equation}
+    \delta y_A = \frac{x_B}{y_A} \delta x_B
+\end{equation}
+$$
+
+Podobně platí, že:
+
+$$
+\begin{equation}
+	\delta y_G = \frac{1}{2}(y_A + \delta y_A) - \frac{1}{2}y_A = \frac{1}{2}\delta y_A
+\end{equation}
+$$
+
+S uvažováním (18) pak platí:
+
+$$
+\begin{equation}
+	\delta y_G = \frac{1}{2}\frac{x_B}{y_A}\delta x_B
+\end{equation}
+$$
+
+Virtuální práce musí být nula aby byla tyč v rovnováze:
+
+$$
+\begin{equation}
+	\delta W = F_G \delta y_G \cos(180) + F \delta x_B \cos(0) = 0
+\end{equation}
+$$
+
+Musíme sjednotit virtuální posuv...tedy dosaďme z (20):
+
+$$
+\begin{equation}
+	\delta W = (-F_G \frac{1}{2}\frac{x_B}{y_A} + F)\delta x_B = 0
+\end{equation}
+$$
+
+Pro libovolné nenulové $\delta x_B$ musí platit, že výraz v závorce je nula!
+Dosadíme za $L = a + b, x_B = c + d, y_A = \sqrt{L^2 - x_B^2}$:
+
+$$
+\begin{equation}
+\delta W = (-F_G \frac{1}{2}\frac{c + d}{\sqrt{(a + b)^2 - (c + d)^2}} + F)\delta x_B = 0
+\end{equation}
+$$
+
+Výraz v závorce je rovnice rovnováhy, tedy:
+
+$$
+\begin{equation}
+    -F_G \frac{1}{2}\frac{c + d}{\sqrt{(a + b)^2 - (c + d)^2}} + F = 0
+\end{equation}
+$$
