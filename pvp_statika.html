@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Informace o předmětu &#8212; Technické mechanika</title>
+    <title>Princip virtuálních prací (PVP) (☕☕☕) &#8212; Technické mechanika</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -51,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Úvod do mechaniky a její rozdělení (☕)" href="uvod_do_mechaniky.html" />
+    <link rel="prev" title="Vniřní statické účinky - Šwedlerovy věty (☕☕)" href="vsu-swedler.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +84,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="uvod.html">
    Informace o předmětu
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="uvod_do_mechaniky.html">
    Úvod do mechaniky a její rozdělení (☕)
@@ -114,8 +116,8 @@
    Vniřní statické účinky - Šwedlerovy věty (☕☕)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pvp_statika.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Princip virtuálních prací (PVP) (☕☕☕)
   </a>
  </li>
@@ -160,7 +162,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/uvod.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/pvp_statika.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -180,7 +182,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/petr-henys/TME/issues/new?title=Issue%20on%20page%20%2Fuvod.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/petr-henys/TME/issues/new?title=Issue%20on%20page%20%2Fpvp_statika.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -207,28 +209,33 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pravidla-pro-udeleni-zapoctu">
-   Pravidla pro udělení zápočtu
+  <a class="reference internal nav-link" href="#princip-virtualni-prace-hmotneho-bodu">
+   Princip virtuální práce hmotného bodu
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pravidla-pro-uspesne-absolvovani-zkousky">
-   Pravidla pro úspěšné absolvování zkoušky
+  <a class="reference internal nav-link" href="#princip-virtualni-prace-pro-soustavu-hmotnych-bodu">
+   Princip virtuální práce pro soustavu hmotných bodů
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#literatura">
-   Literatura
+  <a class="reference internal nav-link" href="#virtualni-prace-reakcnich-sil">
+   Virtuální práce reakčních sil
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#materialy-k-prednaskam-a-cviceni">
-   Materiály k přednáškám a cvičení
+  <a class="reference internal nav-link" href="#zobecneny-pvp">
+   Zobecněný PVP
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slozitost-tematu">
-   Složitost tématu
+  <a class="reference internal nav-link" href="#priklad-01-kyvadlo">
+   Příklad 01: Kyvadlo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priklad-02-rovnovaha-na-kladce">
+   Příklad 02: Rovnováha na kladce
   </a>
  </li>
 </ul>
@@ -242,64 +249,149 @@
         
               <div>
                 
-  <div class="section" id="informace-o-predmetu">
-<h1>Informace o předmětu<a class="headerlink" href="#informace-o-predmetu" title="Permalink to this headline">¶</a></h1>
-<p>Vítejte na stránkách kurzu základní mechaniky pro mechatroniky a studenty programu Aplikovaé vědy v inženýrství (AVI). Tento kurz seznamuje studenty s teoretickými základy Newtonovské/Lagrangeovské mechaniky. Po absolvování tohoto kurzu by měl být student schopen analyzovat samostatně běžné technické problémy.</p>
-<p>Přednášky vede <em>Petr Henyš</em>:</p>
-<ul class="simple">
-<li><p>tel: +42048535 3238</p></li>
-<li><p>email: <a class="reference external" href="mailto:petr&#46;henys&#37;&#52;&#48;tul&#46;cz">petr<span>&#46;</span>henys<span>&#64;</span>tul<span>&#46;</span>cz</a></p></li>
-<li><p>konzultační hodiny: po domluvě</p></li>
-<li><p>kancelář: budova A, A04031</p></li>
-</ul>
-<p>Cvičení akademický rok 2021/2022 vede <em>Václav Vomáčko</em> a <em>Jakub Macháček</em>.</p>
-<div class="section" id="pravidla-pro-udeleni-zapoctu">
-<h2>Pravidla pro udělení zápočtu<a class="headerlink" href="#pravidla-pro-udeleni-zapoctu" title="Permalink to this headline">¶</a></h2>
-<p>Během semestru se budou psát tři testy, vždy po ukončení daného tématu v následujících týdnech:</p>
-<ul class="simple">
-<li><p><strong>5</strong> týden - Statika</p></li>
-<li><p><strong>9</strong> týden - Kinematika</p></li>
-<li><p><strong>13</strong> týden - Dynamika</p></li>
-</ul>
-<div class="warning admonition">
-<p class="admonition-title">Varování</p>
-<p>Kromě testů musí student pravidelně docházet. K úspěšnému získání zápočtu musí student napsat alespoň dva testy a řádně omlouvat neúčast na cvičeních.</p>
+  <div class="section" id="princip-virtualnich-praci-pvp">
+<h1>Princip virtuálních prací (PVP) (☕☕☕)<a class="headerlink" href="#princip-virtualnich-praci-pvp" title="Permalink to this headline">¶</a></h1>
+<p>PVP je zcela odlišný způsob jak dojít k rovnovážnému stavu tělesa. Výchází z předpokladu, že těleso v rovnováze zůstane v rovnováze i po malém (nekonečně malém vychýlení) a že práce vykonaná silami po tomto malém (virtuálním) posunutí je nulová. PVP princip je univerzální a vzhledem k tomu, že práce (energie) je nezávislá na souřadnicovém systému, je i méně pracný než uvolňovací metoda.</p>
+<div class="section" id="princip-virtualni-prace-hmotneho-bodu">
+<h2>Princip virtuální práce hmotného bodu<a class="headerlink" href="#princip-virtualni-prace-hmotneho-bodu" title="Permalink to this headline">¶</a></h2>
+<p>Hmotný bod (HB) je v rovnováze tehdy, pokud platí, že výslednice sil je rovna nule:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    F = 0
+\end{equation}
+\]</div>
+<p>Nyní HB přesuneme “virtuálně” o libovolný malý úsek <span class="math notranslate nohighlight">\(\delta r\)</span>. HB vykoná virtuální práci:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta W = F\cdot\delta r = 0
+\end{equation}
+\]</div>
+<p>Vztah říká, že je-li HB v rovnováze, virtuální práce sil působcích na HB je 0 pro libovolné virtuální posunutí <span class="math notranslate nohighlight">\(\delta r\)</span>. Pokud je virtuální práce 0, musí platit i obráceně, že HB je v rovnováze. Zvolme například <span class="math notranslate nohighlight">\(\delta r = {\delta x, 0, 0}\)</span>, vidíme, že:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta W = 0 = F_x \delta x + F_y 0  + F_z 0 \rightarrow F_x = 0
+\end{equation}
+\]</div>
+</div>
+<div class="section" id="princip-virtualni-prace-pro-soustavu-hmotnych-bodu">
+<h2>Princip virtuální práce pro soustavu hmotných bodů<a class="headerlink" href="#princip-virtualni-prace-pro-soustavu-hmotnych-bodu" title="Permalink to this headline">¶</a></h2>
+<p>Soustava <span class="math notranslate nohighlight">\(N\)</span> HB je v rovnováze jestliže každý HB je v rovnováze, tedy výslednice sil <span class="math notranslate nohighlight">\(F_i=0, i=1, ..., N\)</span>.</p>
+<p align="center">
+    <img src="obrazky/prednaska08/PVP_soustava_hmotnych_bodu.png" alt="soustava hmotných bodů" width="130"/>
+</p>
+<p>Pokud každý bod posuneme o <span class="math notranslate nohighlight">\(\delta r_i\)</span>, můžeme napsat podle PVP:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta W = \sum_{i}^{N} F_i \cdot \delta r_{i}=0
+\end{equation}
+\]</div>
+<p>Obráceně platí, že pokud je <span class="math notranslate nohighlight">\(\delta W=0\)</span>, musí být soustava HB v rovnováze (stejná úvaha jako pro jeden HB.)</p>
+</div>
+<div class="section" id="virtualni-prace-reakcnich-sil">
+<h2>Virtuální práce reakčních sil<a class="headerlink" href="#virtualni-prace-reakcnich-sil" title="Permalink to this headline">¶</a></h2>
+<p>Reakční síla <span class="math notranslate nohighlight">\(R\)</span> je dána geometrickou vazbou <span class="math notranslate nohighlight">\(z\geq 0\)</span>.</p>
+<p align="center">
+    <img src="obrazky/prednaska08/PVP_prace_vazeb.png" alt="práce vazeb" width="90"/>
+</p>
+<p>Vidíme, že virtuální posunutí nemůže být libovolné, tj. musí být takové, které neporušuje vazbu (HB nemůžeme zatlačit do stolu) a musí platit, že podmínka vazby je splněna pro <span class="math notranslate nohighlight">\(\pm \delta r\)</span>.</p>
+<div class="admonition-poznamka admonition">
+<p class="admonition-title">Poznámka</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Virtuální práce reakčních sil při vratných posunutích slučitelných s vazbami je rovna nule.
+</pre></div>
 </div>
 </div>
-<div class="section" id="pravidla-pro-uspesne-absolvovani-zkousky">
-<h2>Pravidla pro úspěšné absolvování zkoušky<a class="headerlink" href="#pravidla-pro-uspesne-absolvovani-zkousky" title="Permalink to this headline">¶</a></h2>
-<p>Zkouška se skládá z:</p>
-<ul class="simple">
-<li><p><strong>písemné části</strong>: 4 příklady + 5 teoretických otázek. Test je bodován, student může dosáhnout až 20 bodů, avšak pro splnění zkoušky potřebuje minimálně <strong>10 bodů</strong>.</p></li>
-<li><p><strong>ústní části</strong>: Pokud student úspěšně napíše test mezi 1 až -1, musí absolvovat ústní zkoušku. V případě, pokud student není spokojen se známou z testu (2 až 3-), může požádat o ústní zkoušku. Ústní zkouška může studentovi známku zlepšit/zhoršit až o jeden stupeň.</p></li>
-</ul>
 </div>
-<div class="section" id="literatura">
-<h2>Literatura<a class="headerlink" href="#literatura" title="Permalink to this headline">¶</a></h2>
-<p>Ke studiu mechaniky je doporučena následující literatura:</p>
-<ul class="simple">
-<li><p>Riley, Sturges: Engineering Mechanics – Statics, John Wiley  Sons, 1993</p></li>
-<li><p>Riley, Sturges: Engineering Mechanics – Dynamics, John Wiley &amp; Sons, 1995</p></li>
-<li><p>Jáč, Polcar: Mechanika sv.1 – statika, VŠST, 1982</p></li>
-<li><p>Bradský, Jáč: Mechanika sv. 2 – kinematika, VŠST, 1983</p></li>
-<li><p>Bradský, Vrzala: Mechanika sv. 3 – dynamika, VŠST, 1986</p></li>
-<li><p>Tepřı́k, Brousil, Votýpka: Statika, ČVUT, 1981</p></li>
-</ul>
+<div class="section" id="zobecneny-pvp">
+<h2>Zobecněný PVP<a class="headerlink" href="#zobecneny-pvp" title="Permalink to this headline">¶</a></h2>
+<p>Výslednice sil působící na itý HB je dána:</p>
+<p><span class="math notranslate nohighlight">\(
+\begin{equation}
+    F_i = F_i + R_i
+\end{equation}
+\)</span></p>
+<p>Podle PVP musí platit, že soustava je v rovnováze tehdy:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\sum_{i}^{N} = F_i\cdot \delta r_i=0
+\end{equation}
+\]</div>
+<p>Dosadíme-li, 5 do 6:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+	\delta W = \sum_{i}^{N} (F_i + R_i)\cdot\delta r_i = \sum_{i}^{N}F_i\cdot\delta r_i + \sum_{i}^{N}R_i\cdot\delta r_i = \sum_{i}^{N}F_i\cdot\delta r_i
+\end{equation}
+\]</div>
+<p>Víme, že virtuální práce vykonaná reakcemi je 0.</p>
 </div>
-<div class="section" id="materialy-k-prednaskam-a-cviceni">
-<h2>Materiály k přednáškám a cvičení<a class="headerlink" href="#materialy-k-prednaskam-a-cviceni" title="Permalink to this headline">¶</a></h2>
-<p>Materiály slouží pro přípravu, ale zdaleka nejsou vyčerpávající a nezharnují všechny informace z přednášek. Odkaz je <a class="reference external" href="https://owncloud.cesnet.cz/index.php/s/NfsCtTcsZ8NfBCM">zde</a>.</p>
+<div class="section" id="priklad-01-kyvadlo">
+<h2>Příklad 01: Kyvadlo<a class="headerlink" href="#priklad-01-kyvadlo" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujme kyvadlo v homogenním gravitačním poli. Nalezněte polohu, kdy je kyvadlo ve statické rovnováze.</p>
+<p align="center">
+    <img src="obrazky/prednaska08/prednaska_priklad01.png" alt="kyvadlo" width="110"/>
+</p>
+<p>Kyvadlo obsahuje geometrickou vazbu, která je dána:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \bar{x}^2 + \bar{y}^2 = l^2 = konst.
+\end{equation}
+\]</div>
+<p>Virtuální posunutí spočítáme jako diferenciál (nekonečně malá):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    2\bar{x}\delta{\bar{x}} + 2\bar{y}\delta{\bar{y}} = 0
+\end{equation}
+\]</div>
+<p>Podle PVP platí:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \delta W = F\cdot\delta r = 0\delta x + mg\delta y = -\frac{mg}{y}x\delta x = 0
+\end{equation}
+\]</div>
+<p>Pro libovolné <span class="math notranslate nohighlight">\(\delta r\)</span>, splňující (8), plyne <span class="math notranslate nohighlight">\(x=0\)</span>! Pro PVP s reakcemi neplyne, že síly <span class="math notranslate nohighlight">\(F\)</span> jsou nulové. Nulový je součet <span class="math notranslate nohighlight">\(F + R\)</span>!</p>
 </div>
-<div class="section" id="slozitost-tematu">
-<h2>Složitost tématu<a class="headerlink" href="#slozitost-tematu" title="Permalink to this headline">¶</a></h2>
-<p>Každé téma je opatřeno barem vyjadřujícím úroveň složitosti:</p>
-<ul class="simple">
-<li><p>lehké téma: ☕ : obvykle vyžaduje jenom dávat pozor na přednášce, případně pozorně prostudovat přednáškové materiály.</p></li>
-<li><p>středné těžké téma: ☕☕ : Téma, které obvykle vyžaduje soustředění na přednášce a k tomu napočítání několika příkladů.</p></li>
-<li><p>těžké téma: ☕☕☕: Nutná pozornost na přednášce, každý krok, kterým si student není jist musí okamžitě konzultovat s vyučujícím. Ke zkoučce je obvykle zapotřebí napočítat příklady a další liteaturu k pochopení dané problematiky.</p></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
+<div class="section" id="priklad-02-rovnovaha-na-kladce">
+<h2>Příklad 02: Rovnováha na kladce<a class="headerlink" href="#priklad-02-rovnovaha-na-kladce" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujme buben zatížený závažím <span class="math notranslate nohighlight">\(m\)</span> v grav. poli. Nalezněte sílu <span class="math notranslate nohighlight">\(F\)</span> tak aby byla soustava v rovnováze.</p>
+<p align="center">
+    <img src="obrazky/prednaska08/prednaska_priklad02.png" alt="kladka" width="130"/>
+</p>
+<p>Podle PVP platí:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \delta W = -mg\delta u_1 + F\delta u_2 = 0
+\end{equation}
+\]</div>
+<p>Geometrická podmínka je:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \frac{\delta u_1}{r_1} = \frac{\delta u_2}{r_2}
+\end{equation}
+\]</div>
+<p>Dosazením 12 do 11:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \delta W = (-mg\frac{r_1}{r_2} + F)\delta u_2=0
+\end{equation}
+\]</div>
+<p>Nebo:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \delta W = (-mg r_1 + F r_2)\delta\alpha=0
+\end{equation}
+\]</div>
 </div>
 </div>
 
@@ -332,15 +424,15 @@
 
 <div class='prev-next-bottom'>
     
-     <div id="next">
-        <a class="right-next" href="uvod_do_mechaniky.html" title="next page">
+    <div id="prev">
+        <a class="left-prev" href="vsu-swedler.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Úvod do mechaniky a její rozdělení (☕)</p>
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Vniřní statické účinky - Šwedlerovy věty (☕☕)</p>
             </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
-     </div>
+    </div>
 
 </div>
         
