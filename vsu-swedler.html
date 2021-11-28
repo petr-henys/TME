@@ -287,11 +287,14 @@
 <p>Nejdříve nosník uvolníme a napíšeme rovnice rovnováhy:</p>
 <p align="center">
 <img src="obrazky/prednaska07/priklad02_uvolneni.png" width=400/>
-</p><p>\begin{align}
-\overrightarrow{x}:&amp; R_{Ax} =0  \
-y\uparrow:&amp; R_{Ay} + R_{By} - \frac{Lq_0}{2}=0 \
-\overset{\curvearrowleft}{+M}: &amp; R_{By}L - \frac{Lq_0}{2}\frac{2}{3}L=0
-\end{align}</p>
+</p><div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\overrightarrow{x}:&amp; R_{Ax} =0  \\
+y\uparrow:&amp; R_{Ay} + R_{By} - \frac{Lq_0}{2}=0 \\
+\overset{\curvearrowleft}{+M}: &amp; R_{By}L - \frac{Lq_0}{2}\frac{2}{3}L=0 
+\end{align}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
@@ -342,10 +345,13 @@ L⋅q₀
 </div>
 <div class="section" id="aplikace-swedlerovy-vety">
 <h3>Aplikace Šwedlerovy věty<a class="headerlink" href="#aplikace-swedlerovy-vety" title="Permalink to this headline">¶</a></h3>
-<p>nejdříve definujeme funkční předpis pro zatížení:
+<p>nejdříve definujeme funkční předpis pro zatížení:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
 q(x) = \frac{q_0}{L}x
-\end{equation}</p>
+\end{equation}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
@@ -355,14 +361,20 @@ q(x) = \frac{q_0}{L}x
 </div>
 </div>
 </div>
-<p>vztah zatížení <span class="math notranslate nohighlight">\(q(x)\)</span> a tečné síly <span class="math notranslate nohighlight">\(Q(x)\)</span> (diff. rovnice):
+<p>vztah zatížení <span class="math notranslate nohighlight">\(q(x)\)</span> a tečné síly <span class="math notranslate nohighlight">\(Q(x)\)</span> (diff. rovnice):</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
 \frac{dQ(x)}{dx} = - q(x)
-\end{equation}</p>
-<p>Řešením je:
+\end{equation}
+\]</div>
+<p>Řešením je:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
 \int dQ(x) = -\int q(x)dx
-\end{equation}</p>
+\end{equation}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drQ</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="o">-</span><span class="n">q</span><span class="p">)</span> <span class="c1"># differencialni rovnice</span>
@@ -386,14 +398,20 @@ Q(x) = C₁ - ─────
 </div>
 </div>
 </div>
-<p>konstantu <span class="math notranslate nohighlight">\(C_1\)</span> neznáme, ale umíme jí spočítat ze znalostí reakcí <span class="math notranslate nohighlight">\(R\)</span>:
+<p>konstantu <span class="math notranslate nohighlight">\(C_1\)</span> neznáme, ale umíme jí spočítat ze znalostí reakcí <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
-Q(x=0) = R_{Ay} = C_1 \xrightarrow{} C_1= \frac{L q_0}{6}
-\end{equation}</p>
-<p>po dosazení <span class="math notranslate nohighlight">\(C_1\)</span>, vidíme, že tečná síla <span class="math notranslate nohighlight">\(Q(x)\)</span> má předpis:
+    Q(x=0) = R_{Ay} = C_1 \xrightarrow{} C_1= \frac{L q_0}{6}
+\end{equation}
+\]</div>
+<p>po dosazení <span class="math notranslate nohighlight">\(C_1\)</span>, vidíme, že tečná síla <span class="math notranslate nohighlight">\(Q(x)\)</span> má předpis:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
 Q(x) = \frac{Lq_0}{6} - \frac{q_0}{2L}x^{2}
-\end{equation}</p>
+\end{equation}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -414,10 +432,13 @@ Q(x) = \frac{Lq_0}{6} - \frac{q_0}{2L}x^{2}
 </div>
 <div class="section" id="nalezeni-momentu-m">
 <h3>Nalezení momentu <span class="math notranslate nohighlight">\(M\)</span><a class="headerlink" href="#nalezeni-momentu-m" title="Permalink to this headline">¶</a></h3>
-<p>vztah tečné síly <span class="math notranslate nohighlight">\(Q(x)\)</span> a momentu <span class="math notranslate nohighlight">\(M(x)\)</span> (diff. rovnice):
+<p>vztah tečné síly <span class="math notranslate nohighlight">\(Q(x)\)</span> a momentu <span class="math notranslate nohighlight">\(M(x)\)</span> (diff. rovnice):</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
 \frac{dM(x)}{dx} = Q(x)
-\end{equation}</p>
+\end{equation}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">)</span> <span class="c1"># jako funkce</span>
@@ -427,10 +448,13 @@ Q(x) = \frac{Lq_0}{6} - \frac{q_0}{2L}x^{2}
 </div>
 </div>
 </div>
-<p>Řešením je:
+<p>Řešením je:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
 \int dM(x) = \int Q(x)dx = \int\Big(\frac{Lq_0}{6} - \frac{q_0}{2L}x^{2}\Big)dx
-\end{equation}</p>
+\end{equation}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">drM</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">M</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">Q</span><span class="p">)</span> <span class="c1"># differencialni rovnice</span>
@@ -454,10 +478,13 @@ M(x) = C₁ + ──────────────
 </div>
 </div>
 </div>
-<p>konstantu <span class="math notranslate nohighlight">\(C_1\)</span> neznáme, ale umíme jí spočítat ze znalostí reakcí <span class="math notranslate nohighlight">\(M\)</span>:
+<p>konstantu <span class="math notranslate nohighlight">\(C_1\)</span> neznáme, ale umíme jí spočítat ze znalostí reakcí <span class="math notranslate nohighlight">\(M\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 \begin{equation}
-M(x=0) = 0 = C_1 \xrightarrow{} C_1= 0
-\end{equation}</p>
+    M(x=0) = 0 = C_1 \xrightarrow{} C_1= 0
+\end{equation}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mf">1.</span>
