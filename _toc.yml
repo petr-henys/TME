@@ -7,4 +7,5 @@ chapters:
 - file: uvod_do_mechaniky
 - file: ucinky_sily
 - file: statika_hb
-- file: vsu.ipynb
+- file: vsu-rez.ipynb
+- file: vsu-swedler.ipynb
