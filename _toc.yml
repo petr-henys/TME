@@ -12,3 +12,7 @@ parts:
   - file: vsu-rez.ipynb
   - file: vsu-swedler.ipynb
   - file: pvp_statika
+
+- caption: Kinematika
+  chapters:
+  - file: mechanizmy.ipynb
