@@ -4,7 +4,7 @@
 format: jb-book
 root: uvod
 parts:
-- caption: Tutorials
+- caption: Statika
   chapters:
   - file: uvod_do_mechaniky
   - file: ucinky_sily
