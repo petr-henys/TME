@@ -3,10 +3,12 @@
 
 format: jb-book
 root: uvod
-chapters:
-- file: uvod_do_mechaniky
-- file: ucinky_sily
-- file: statika_hb
-- file: vsu-rez.ipynb
-- file: vsu-swedler.ipynb
-- file: pvp_statika
+parts:
+- caption: Tutorials
+  chapters:
+  - file: uvod_do_mechaniky
+  - file: ucinky_sily
+  - file: statika_hb
+  - file: vsu-rez.ipynb
+  - file: vsu-swedler.ipynb
+  - file: pvp_statika
