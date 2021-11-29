@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Úvod do mechaniky a její rozdělení (☕) &#8212; Technické mechanika</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -54,7 +54,10 @@
     <link rel="next" title="Účinky síly (☕)" href="ucinky_sily.html" />
     <link rel="prev" title="Informace o předmětu" href="uvod.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -70,6 +73,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="_static/logo.png" class="logo" alt="logo">
       
@@ -106,8 +113,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="prednaska_priklad01.html">
-   Vnitřní statické účinky
+  <a class="reference internal" href="vsu-rez.html">
+   Vnitřní statické účinky - metoda řezu (☕☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vsu-swedler.html">
+   Vniřní statické účinky - Šwedlerovy věty (☕☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pvp_statika.html">
+   Princip virtuálních prací (PVP) (☕☕☕)
   </a>
  </li>
 </ul>
@@ -228,7 +245,7 @@
         
               <div>
                 
-  <div class="section" id="uvod-do-mechaniky-a-jeji-rozdeleni">
+  <div class="tex2jax_ignore mathjax_ignore section" id="uvod-do-mechaniky-a-jeji-rozdeleni">
 <h1>Úvod do mechaniky a její rozdělení (☕)<a class="headerlink" href="#uvod-do-mechaniky-a-jeji-rozdeleni" title="Permalink to this headline">¶</a></h1>
 <p>Mechanika je stará displína, která se dělí do mnoha podoborů. Nejjednodušší rozdělení spočívá v rozdělení podle sil, které působí na těleso, tj. rozdělení na:</p>
 <ul class="simple">
@@ -346,36 +363,27 @@ jevů v prostoru.</p>
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="uvod.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Informace o předmětu</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="uvod.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Informace o předmětu</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ucinky_sily.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Účinky síly (☕)</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="ucinky_sily.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Účinky síly (☕)</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -391,8 +399,7 @@ jevů v prostoru.</p>
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
