@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mechanizmy &#8212; Technické mechanika</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Princip virtuálních prací (PVP) (☕☕☕)" href="pvp_statika.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Technické mechanika</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="uvod.html">
+   Informace o předmětu
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Statika
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="uvod_do_mechaniky.html">
+   Úvod do mechaniky a její rozdělení (☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ucinky_sily.html">
+   Účinky síly (☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="statika_hb.html">
+   Statika hmotného bodu a tuhého tělesa, stupně volnosti (☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vsu-rez.html">
+   Vnitřní statické účinky - metoda řezu (☕☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vsu-swedler.html">
+   Vniřní statické účinky - Šwedlerovy věty (☕☕)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pvp_statika.html">
+   Princip virtuálních prací (PVP) (☕☕☕)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Kinematika
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Mechanizmy
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/mechanizmy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/petr-henys/TME"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/petr-henys/TME/issues/new?title=Issue%20on%20page%20%2Fmechanizmy.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/petr-henys/TME/master?urlpath=tree/mechanizmy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#klasifikace">
+   Klasifikace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prevodova-funkce">
+   Převodová funkce
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vektorova-smycka-problem">
+   Vektorová smyčka: problém
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specialni-pripad-mathrm-t-gl-pro-2d">
+   Speciální případ
+   <span class="math notranslate nohighlight">
+    \(\mathrm{T}^{GL}\)
+   </span>
+   pro 2D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priklad-01-svazane-body">
+   Příklad 01: svázané body
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reseni">
+     Řešení
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="mechanizmy">
+<h1>Mechanizmy<a class="headerlink" href="#mechanizmy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="klasifikace">
+<h2>Klasifikace<a class="headerlink" href="#klasifikace" title="Permalink to this headline">¶</a></h2>
+<p>Mechanismy je možno rozdělit na rovinné a prostorové. U rovinných mechanismů (i když jsou prostorově konstruovány) všechny body mechanismu se pohybují v rovinách rovnoběžných, osy rotací jsou rovnoběžné, při grafickém znázorňování jsou tyto osy kolmé na roviny pohybů. Členy mechanismů nemusí být rovinné útvary tj. desky- např. klikový mechanismus spalovacího motoru. U prostorových mechanismů konají jednotlivá tělesa vzhledem k rámu nebo vůči sobě prostorové pohyby.</p>
+<p align="center">
+<img src="obrazky/prednaska11/uvod_obrazek.png" width=700/>
+</p>
+<p>Nejčastěji se vyskytují mechanismy, které mají jeden stupeň volnosti. Má-li mechanismus dva stupně volnosti, nazývá se diferenciál.</p>
+</div>
+<div class="section" id="prevodova-funkce">
+<h2>Převodová funkce<a class="headerlink" href="#prevodova-funkce" title="Permalink to this headline">¶</a></h2>
+<p>Podle převodu se mechanismy dělí na mechanismy s konstantním převodem (závislost hnané souřadnice na hnací je lineární) a mechanismy s nekonstantním převodem(závislost hnaných souřadnic na hnací je nelineární).Závislost souřadnice hnaného členu <span class="math notranslate nohighlight">\(\Psi\)</span> na hnací souřadnici <span class="math notranslate nohighlight">\(\phi\)</span> nazýváme zdvihovou závislostí:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \Psi = \lambda(\phi)
+\end{equation}
+\]</div>
+<p>Itá derivace je pak itá převodová funkce:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \mu_{i} = \frac{d^i\Psi}{d\phi^i}
+\end{equation}
+\]</div>
+</div>
+<div class="section" id="vektorova-smycka-problem">
+<h2>Vektorová smyčka: problém<a class="headerlink" href="#vektorova-smycka-problem" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujme těleso, které vykonává otáčivý a posuvný pohyb:</p>
+<p align="center">
+<img src="obrazky/prednaska11/vektorova_smycka.png" width=500/>
+</p>
+<p>Zavěďme dva souřadnicové systémy (SS): globální a lokální a uvažujme těleso dokonale tuhé. Vektoy ve vektorové smyčce lze sčítat jen v rámci jednoho souřadnicového systému a tak musí být všechny vektory transformovány podle potřeby.</p>
+<p align="center">
+<img src="obrazky/prednaska11/vektorova_smycka_stejny_ss.png" width=400/>
+</p>
+<p>Oba SS prochází stejným počátkem pro jednoduchost. Uvažujme dva SS, které mají společný počátek a vyjádřeme kosíny os lokálního SS v globálním SS.</p>
+<p align="center">
+<img src="obrazky/prednaska11/transformační matice.png" width=750/>
+</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathrm{T}\)</span> je ortogonální (<span class="math notranslate nohighlight">\(\mathrm{T}^{-1}=\mathrm{T}^T\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathrm{T}(\phi(t))\)</span>: <span class="math notranslate nohighlight">\(r_B(t) = r_L(t) + \mathrm{T}^{GL}(t)r_{LB}\)</span></p></li>
+</ul>
+<p>Transformační matice <span class="math notranslate nohighlight">\(\mathrm{T}\)</span> obsahuje 9 neznámých úhlů. Pro <span class="math notranslate nohighlight">\(r_B\)</span> dokonce 12 neznámých. Úhly nejsou nezávislé a splňují vazebné podmínky:
+$<span class="math notranslate nohighlight">\(
+\begin{align}
+		\cos(\alpha_x)^2+\cos(\beta_x)^2 + \cos(\gamma_x)^2 = &amp; 1 \\
+		\cos(\alpha_y)^2+\cos(\beta_y)^2 + \cos(\gamma_y)^2 = &amp; 1 \\
+		\cos(\alpha_y)^2+\cos(\beta_y)^2 + \cos(\gamma_y)^2 = &amp; 1 \\
+		i_L\cdot j_L = &amp; 0 \\
+		j_L\cdot k_L = &amp; 0 \\
+		k_L\cdot i_L = &amp; 0
+\end{align}
+\)</span>$</p>
+<p>Tedy 6 rovnic odebere přebývajících 6 stupňů volnosti.</p>
+</div>
+<div class="section" id="specialni-pripad-mathrm-t-gl-pro-2d">
+<h2>Speciální případ <span class="math notranslate nohighlight">\(\mathrm{T}^{GL}\)</span> pro 2D<a class="headerlink" href="#specialni-pripad-mathrm-t-gl-pro-2d" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujme globální a lokální SS, které mají společný počátek a platí, že <span class="math notranslate nohighlight">\(z^G = z^L\)</span></p>
+<p align="center">
+<img src="obrazky/prednaska11/transformační matice_2D.png" width=700/>
+</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathrm{T}(\phi(t))\)</span>: <span class="math notranslate nohighlight">\(r_B^G(t) = r_L^G(t) + \mathrm{T}^{GL}(t)r_B^L\)</span> (přejdeme k zápisu zohledňující SS.)</p></li>
+<li><p>rychlost: <span class="math notranslate nohighlight">\(\dot{r}_B^G=\dot{r}_L^G + \dot{\mathrm{T}}^{GL}r_B^G + \mathrm{T}^{GL}\dot{r}_B^L\)</span></p></li>
+<li><p>zrychlení: <span class="math notranslate nohighlight">\(\ddot{r}_B^G=\ddot{r}_L^G + \ddot{\mathrm{T}}^{GL}r_B^G + 2\dot{\mathrm{T}}^{GL}\dot{r}_B^G + \mathrm{T}^{GL}\ddot{r}_B^L\)</span></p></li>
+</ul>
+<p>Některé členy budeme považovat za konstantní: <span class="math notranslate nohighlight">\(r_B^L\)</span>, časová derivace transformační matice <span class="math notranslate nohighlight">\(\mathrm{T}^{GL}\)</span> je:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+		\dot{\mathrm{T}}^{GL} = \begin{bmatrix}
+			-\sin(\phi) &amp; -\cos(\phi) &amp; 0 \\
+			\cos(\phi) &amp; -\sin(\phi) &amp; 0 \\
+			0 &amp; 0 &amp; 0
+		\end{bmatrix}\dot{\phi}
+\end{equation}
+\end{split}\]</div>
+<p>a zrychlení:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+	\ddot{\mathrm{T}}^{GL} = \begin{bmatrix}
+	-\cos(\phi) &amp; \sin(\phi) &amp; 0 \\
+	-\sin(\phi) &amp; -\cos(\phi) &amp; 0 \\
+	0 &amp; 0 &amp; 0
+\end{bmatrix}\dot{\phi}^2 + \begin{bmatrix}
+-\sin(\phi) &amp; -\cos(\phi) &amp; 0 \\
+\cos(\phi) &amp; -\sin(\phi) &amp; 0 \\
+0 &amp; 0 &amp; 0 \end{bmatrix} \ddot{\phi}
+\end{equation}
+\end{split}\]</div>
+<p>poznámka: <span class="math notranslate nohighlight">\(\dot{w}^L = (\mathrm{T}^{GL})^T\dot{\mathrm{T}}^{GL}w^G\)</span></p>
+</div>
+<div class="section" id="priklad-01-svazane-body">
+<h2>Příklad 01: svázané body<a class="headerlink" href="#priklad-01-svazane-body" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujte dokonalé lano bez tření, které se odvíjí z bubnu o poloměru <span class="math notranslate nohighlight">\(R\)</span>. Na konci lana je bod <span class="math notranslate nohighlight">\(A\)</span>, který se pohybuje vodorovně konstantní rychlostí <span class="math notranslate nohighlight">\(v_A\)</span>.</p>
+<p align="center">
+<img src="obrazky/prednaska11/prednaska_priklad01_zadani.png" width=250/>
+</p>
+<p><strong>Určete:</strong></p>
+<ul class="simple">
+<li><p>a) průběh natočení <span class="math notranslate nohighlight">\(\phi\)</span> na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>b) průběh úhlové rychlosti <span class="math notranslate nohighlight">\(\omega\)</span> na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>c) průběh úlového zrychlení <span class="math notranslate nohighlight">\(\alpha\)</span> na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>d) obvodovou rychlost <span class="math notranslate nohighlight">\(v_A'\)</span> bubnu na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+</ul>
+<div class="section" id="reseni">
+<h3>Řešení<a class="headerlink" href="#reseni" title="Permalink to this headline">¶</a></h3>
+<p>Nejdříve zavedeme sledované a pomocné veličiny:</p>
+<p align="center">
+<img src="obrazky/prednaska11/prednaska_priklad01_zavedeni_velicin.png" width=250/>
+</p><p>Je zřejmé, že:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+v'_A = v_A\sin(\gamma_A)
+\end{equation}
+\]</div>
+<p>také, že <span class="math notranslate nohighlight">\(x_A = v_A t\)</span> a <span class="math notranslate nohighlight">\(\cos(\gamma_A) = \frac{R}{R+x_A}\)</span></p>
+<p>Pomocný úhel <span class="math notranslate nohighlight">\(\gamma_A\)</span> lze snadno nahradit (gon.identita):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\Big(\frac{R}{R+x_A}\Big)^2 + \Big(\frac{v'_A}{v_A}\Big)^2 = 1 \tag{1}
+\end{equation}
+\]</div>
+<p>Obvodou rychlost bubunu známe! Proto:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+v'_A = \omega R
+\end{equation}
+\]</div>
+<p>dosadíme do (1):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+    \omega = \pm \frac{v_A}{R}\sqrt{1-\Big(\frac{R}{R + x_A}\Big)^2} = - \frac{v_A}{R}\sqrt{1-\Big(\frac{1}{1 + \frac{v_A t}{R}}\Big)^2} \tag{2}
+\end{equation}
+\]</div>
+<p>Zrychlení <span class="math notranslate nohighlight">\(\alpha\)</span> je dáno derivací <span class="math notranslate nohighlight">\(\dot{\omega}\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="n">R</span><span class="p">,</span> <span class="n">v_A</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;R v_A t&#39;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">omega</span> <span class="o">=</span> <span class="o">-</span><span class="n">v_A</span> <span class="o">/</span> <span class="n">R</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">v_A</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="n">R</span><span class="p">)))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">alpha</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{v_{A}^{2}}{R^{2} \left(1 + \frac{t v_{A}}{R}\right)^{3} \sqrt{1 - \frac{1}{\left(1 + \frac{t v_{A}}{R}\right)^{2}}}}\]</div>
+</div>
+</div>
+<p>Výpočet natočení <span class="math notranslate nohighlight">\(\phi\)</span> vychází z diff. rovnice <span class="math notranslate nohighlight">\(\omega = \dot{\phi}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\int_{0}^{\phi} d\phi = -\int_0^t \frac{v_A}{R}\sqrt{1-\Big(\frac{1}{1 + \frac{v_A t}{R}}\Big)^2} dt
+\end{equation}
+\]</div>
+<p>Pro řešení intregrálu zaveďme substituci: <span class="math notranslate nohighlight">\(u = 1 + \frac{v_At}{R}\)</span>, differenciál je pak <span class="math notranslate nohighlight">\(du=\frac{v_A}{R}dt\)</span>, integrál přepíšeme:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\int_0^{\phi} d\phi = -\int_1^{1+\frac{v_At}{R}}\sqrt{1 - \frac{1}{u^2}} du
+\end{equation}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">phi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;phi&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">Function</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dr_phi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">phi</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">u</span><span class="p">)</span> <span class="c1"># differencialni rovnice</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">dr_phi</span><span class="p">,</span> <span class="n">phi</span><span class="p">(</span><span class="n">u</span><span class="p">))</span> <span class="c1"># reseni differencialni rovnice</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \phi{\left(u \right)} = C_{1} - \begin{cases} - \frac{i u^{2}}{\sqrt{1 - u^{2}}} - i \operatorname{acosh}{\left(\frac{1}{u} \right)} + \frac{i}{\sqrt{1 - u^{2}}} &amp; \text{for}\: \frac{1}{u^{2}} &gt; 1 \\\frac{u^{2}}{\sqrt{u^{2} - 1}} + \operatorname{asin}{\left(\frac{1}{u} \right)} - \frac{1}{\sqrt{u^{2} - 1}} &amp; \text{otherwise} \end{cases}\end{split}\]</div>
+</div>
+</div>
+<p>Řešení diff. rovnice je komplikované, tak přejdeme k numerice:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">omega_fun</span><span class="p">(</span><span class="n">phi</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">v_A</span><span class="p">,</span> <span class="n">R</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">v_A</span> <span class="o">/</span> <span class="n">R</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="p">(</span><span class="n">v_A</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="n">R</span><span class="p">)))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_A_num</span><span class="p">,</span> <span class="n">R_num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">phi_0</span> <span class="o">=</span> <span class="mf">0.</span>
+<span class="n">tn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">phin</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">omega_fun</span><span class="p">,</span> <span class="n">phi_0</span><span class="p">,</span> <span class="n">tn</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">v_A_num</span><span class="p">,</span> <span class="n">R_num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">omegan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">omega</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">v_A</span><span class="p">:</span><span class="n">v_A_num</span><span class="p">,</span> <span class="n">R</span><span class="p">:</span><span class="n">R_num</span><span class="p">}))</span>
+<span class="n">alphan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">alpha</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">v_A</span><span class="p">:</span><span class="n">v_A_num</span><span class="p">,</span> <span class="n">R</span><span class="p">:</span><span class="n">R_num</span><span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">phin</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\phi$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">omegan</span><span class="p">(</span><span class="n">tn</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\omega$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">alphan</span><span class="p">(</span><span class="n">tn</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\alpha$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;cas [t]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;lambdifygenerated-2&gt;:2: RuntimeWarning: divide by zero encountered in true_divide
+  return (-1/(sqrt(1 - 1/(t + 1)**2)*(t + 1)**3))
+</pre></div>
+</div>
+<img alt="_images/mechanizmy_16_1.png" src="_images/mechanizmy_16_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "petr-henys/TME",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="pvp_statika.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Princip virtuálních prací (PVP) (☕☕☕)</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Petr Henyš<br/>
+        
+            &copy; Copyright Petr Henyš.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
