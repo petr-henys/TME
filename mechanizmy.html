@@ -662,165 +662,8 @@ r_A^G - r_B^G = r_L^G -r_B^G + \mathrm{T}^{GL}r_A^L \tag{3}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_152127</span><span class="o">/</span><span class="mf">956292419.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">eq2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">r_x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">r_y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">l</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">res</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">phi</span><span class="o">=</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># vyber reseni</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">phi</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">solve</span><span class="nt">(f, *symbols, **flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1172</span>     <span class="c1">###########################################################################</span>
-<span class="g g-Whitespace">   </span><span class="mi">1173</span>     <span class="k">if</span> <span class="n">bare_f</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1174</span>         <span class="n">solution</span> <span class="o">=</span> <span class="n">_solve</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">*</span><span class="n">symbols</span><span class="p">,</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1175</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1176</span>         <span class="n">solution</span> <span class="o">=</span> <span class="n">_solve_system</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">_solve</span><span class="nt">(f, *symbols, **flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1763</span>     <span class="k">if</span> <span class="n">check</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1764</span>         <span class="c1"># keep only results if the check is not False</span>
-<span class="ne">-&gt; </span><span class="mi">1765</span>         <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">result</span> <span class="k">if</span>
-<span class="g g-Whitespace">   </span><span class="mi">1766</span>                   <span class="n">checksol</span><span class="p">(</span><span class="n">f_num</span><span class="p">,</span> <span class="p">{</span><span class="n">symbol</span><span class="p">:</span> <span class="n">r</span><span class="p">},</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1767</span>     <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1764</span>         <span class="c1"># keep only results if the check is not False</span>
-<span class="g g-Whitespace">   </span><span class="mi">1765</span>         <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">result</span> <span class="k">if</span>
-<span class="ne">-&gt; </span><span class="mi">1766</span>                   <span class="n">checksol</span><span class="p">(</span><span class="n">f_num</span><span class="p">,</span> <span class="p">{</span><span class="n">symbol</span><span class="p">:</span> <span class="n">r</span><span class="p">},</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1767</span>     <span class="k">return</span> <span class="n">result</span>
-<span class="g g-Whitespace">   </span><span class="mi">1768</span> 
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">checksol</span><span class="nt">(f, symbol, sol, **flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>             <span class="c1"># start over without the failed expanded form, possibly</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>             <span class="c1"># with a simplified solution</span>
-<span class="ne">--&gt; </span><span class="mi">305</span>             <span class="n">val</span> <span class="o">=</span> <span class="n">simplify</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>             <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;force&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>                 <span class="n">val</span><span class="p">,</span> <span class="n">reps</span> <span class="o">=</span> <span class="n">posify</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/simplify/simplify.py</span> in <span class="ni">simplify</span><span class="nt">(expr, ratio, measure, rational, inverse, doit, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">681</span> 
-<span class="g g-Whitespace">    </span><span class="mi">682</span>     <span class="n">short</span> <span class="o">=</span> <span class="n">shorter</span><span class="p">(</span><span class="n">powsimp</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">&#39;exp&#39;</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">powsimp</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="n">expr</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">683</span>     <span class="n">short</span> <span class="o">=</span> <span class="n">shorter</span><span class="p">(</span><span class="n">short</span><span class="p">,</span> <span class="n">cancel</span><span class="p">(</span><span class="n">short</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">684</span>     <span class="n">short</span> <span class="o">=</span> <span class="n">shorter</span><span class="p">(</span><span class="n">short</span><span class="p">,</span> <span class="n">factor_terms</span><span class="p">(</span><span class="n">short</span><span class="p">),</span> <span class="n">expand_power_exp</span><span class="p">(</span><span class="n">expand_mul</span><span class="p">(</span><span class="n">short</span><span class="p">)))</span>
-<span class="g g-Whitespace">    </span><span class="mi">685</span>     <span class="k">if</span> <span class="n">short</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">TrigonometricFunction</span><span class="p">,</span> <span class="n">HyperbolicFunction</span><span class="p">,</span> <span class="n">ExpBase</span><span class="p">):</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/polys/polytools.py</span> in <span class="ni">cancel</span><span class="nt">(f, *gens, **args)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6618</span> 
-<span class="g g-Whitespace">   </span><span class="mi">6619</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">6620</span>         <span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="p">),</span> <span class="n">opt</span> <span class="o">=</span> <span class="n">parallel_poly_from_expr</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">),</span> <span class="o">*</span><span class="n">gens</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6621</span>     <span class="k">except</span> <span class="n">PolificationFailed</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">6622</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">)):</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/polys/polytools.py</span> in <span class="ni">parallel_poly_from_expr</span><span class="nt">(exprs, *gens, **args)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4307</span>     <span class="sd">&quot;&quot;&quot;Construct polynomials from expressions. &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">4308</span>     <span class="n">opt</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">build_options</span><span class="p">(</span><span class="n">gens</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">4309</span>     <span class="k">return</span> <span class="n">_parallel_poly_from_expr</span><span class="p">(</span><span class="n">exprs</span><span class="p">,</span> <span class="n">opt</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4310</span> 
-<span class="g g-Whitespace">   </span><span class="mi">4311</span> 
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/polys/polytools.py</span> in <span class="ni">_parallel_poly_from_expr</span><span class="nt">(exprs, opt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4346</span> 
-<span class="g g-Whitespace">   </span><span class="mi">4347</span>                 <span class="k">if</span> <span class="n">opt</span><span class="o">.</span><span class="n">expand</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">4348</span>                     <span class="n">expr</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">4349</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">4350</span>             <span class="n">failed</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/cache.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span>             <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">94</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">cfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>                 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">expand</span><span class="nt">(self, deep, modulus, power_base, power_exp, mul, log, multinomial, basic, **hints)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3454</span>                     <span class="n">expr</span><span class="p">,</span> <span class="s1">&#39;_eval_expand_multinomial&#39;</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3455</span>             <span class="k">if</span> <span class="n">hints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mul&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">3456</span>                 <span class="n">expr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">3457</span>                     <span class="n">expr</span><span class="p">,</span> <span class="s1">&#39;_eval_expand_mul&#39;</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3458</span>             <span class="k">if</span> <span class="n">hints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3379</span>             <span class="n">sargs</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">   </span><span class="mi">3380</span>             <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">expr</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3381</span>                 <span class="n">arg</span><span class="p">,</span> <span class="n">arghit</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">hint</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3382</span>                 <span class="n">hit</span> <span class="o">|=</span> <span class="n">arghit</span>
-<span class="g g-Whitespace">   </span><span class="mi">3383</span>                 <span class="n">sargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3379</span>             <span class="n">sargs</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">   </span><span class="mi">3380</span>             <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">expr</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3381</span>                 <span class="n">arg</span><span class="p">,</span> <span class="n">arghit</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">hint</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3382</span>                 <span class="n">hit</span> <span class="o">|=</span> <span class="n">arghit</span>
-<span class="g g-Whitespace">   </span><span class="mi">3383</span>                 <span class="n">sargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3379</span>             <span class="n">sargs</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">   </span><span class="mi">3380</span>             <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">expr</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3381</span>                 <span class="n">arg</span><span class="p">,</span> <span class="n">arghit</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">hint</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3382</span>                 <span class="n">hit</span> <span class="o">|=</span> <span class="n">arghit</span>
-<span class="g g-Whitespace">   </span><span class="mi">3383</span>                 <span class="n">sargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3387</span> 
-<span class="g g-Whitespace">   </span><span class="mi">3388</span>         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">3389</span>             <span class="n">newexpr</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">hint</span><span class="p">)(</span><span class="o">**</span><span class="n">hints</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3390</span>             <span class="k">if</span> <span class="n">newexpr</span> <span class="o">!=</span> <span class="n">expr</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3391</span>                 <span class="k">return</span> <span class="p">(</span><span class="n">newexpr</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">_eval_expand_mul</span><span class="nt">(self, **hints)</span>
-<span class="g g-Whitespace">    </span><span class="mi">891</span>                 <span class="n">args</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">892</span>                 <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">893</span>                     <span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">plain</span><span class="p">,</span> <span class="n">term</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">894</span>                     <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">is_Mul</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">is_Add</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">args</span><span class="p">)</span> <span class="ow">and</span> <span class="n">deep</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">895</span>                         <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">_eval_expand_mul</span><span class="p">()</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/cache.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span>             <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">94</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">cfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>                 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">96</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/operations.py</span> in <span class="ni">__new__</span><span class="nt">(cls, *args, **options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span>             <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> 
-<span class="ne">---&gt; </span><span class="mi">47</span>         <span class="n">c_part</span><span class="p">,</span> <span class="n">nc_part</span><span class="p">,</span> <span class="n">order_symbols</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="n">is_commutative</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">nc_part</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="n">obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_from_args</span><span class="p">(</span><span class="n">c_part</span> <span class="o">+</span> <span class="n">nc_part</span><span class="p">,</span> <span class="n">is_commutative</span><span class="p">)</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">flatten</span><span class="nt">(cls, seq)</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span> 
-<span class="g g-Whitespace">    </span><span class="mi">400</span>         <span class="c1"># in c_powers</span>
-<span class="ne">--&gt; </span><span class="mi">401</span>         <span class="n">c_powers</span> <span class="o">=</span> <span class="n">_gather</span><span class="p">(</span><span class="n">c_powers</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">402</span> 
-<span class="g g-Whitespace">    </span><span class="mi">403</span>         <span class="c1"># and in num_exp</span>
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">_gather</span><span class="nt">(c_powers)</span>
-<span class="g g-Whitespace">    </span><span class="mi">395</span>             <span class="n">new_c_powers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span>             <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">common_b</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<span class="nn">--&gt; 397                 new_c_powers.extend([(b, c*t) for t, c</span> in <span class="ni">e.items</span><span class="nt">()])</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span>             <span class="k">return</span> <span class="n">new_c_powers</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span> 
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">395</span>             <span class="n">new_c_powers</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span>             <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">common_b</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<span class="nn">--&gt; 397                 new_c_powers.extend([(b, c*t) for t, c</span> in <span class="ni">e.items</span><span class="nt">()])</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span>             <span class="k">return</span> <span class="n">new_c_powers</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span> 
-
-<span class="nn">/usr/lib/python3/dist-packages/sympy/core/numbers.py</span> in <span class="ni">__mul__</span><span class="nt">(self, other)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2203</span>         <span class="k">return</span> <span class="n">Rational</span><span class="o">.</span><span class="fm">__rsub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2204</span> 
-<span class="ne">-&gt; </span><span class="mi">2205</span>     <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2206</span>         <span class="k">if</span> <span class="n">global_evaluate</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2207</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">integer_types</span><span class="p">):</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - 2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)}\]</div>
 </div>
 </div>
 </div>
@@ -868,7 +711,13 @@ b\sin(\phi)\dot{\phi} + h\cos(\phi)\dot{\phi} = \frac{l}{a}\dot{l}(t \rightarrow
 <div class="math notranslate nohighlight">
 \[
 \begin{equation}
-b\cos(\phi)\dot{\phi}^2 + b\sin(\phi)\ddot{\phi} - h\sin(\phi)\dot{\phi}^2 + h\cos(\phi)\ddot{\phi} = \frac{1}{a}\Big(\dot{l}^2(t) + l(t)\ddot{l}(t)\Big) \rightarrow \alpha = \frac{\dot{l}^2(t) + l(t)\ddot{l}(t) - a\Big(b\cos(\phi) - h\sin(\phi)\Big)\dot{\phi}^2}{a\Big(b\sin(\phi) + h\cos(\phi)\Big)}
+b\cos(\phi)\dot{\phi}^2 + b\sin(\phi)\ddot{\phi} - h\sin(\phi)\dot{\phi}^2 + h\cos(\phi)\ddot{\phi} = \frac{1}{a}\Big(\dot{l}^2(t) + l(t)\ddot{l}(t)\Big) 
+\end{equation}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\rightarrow \alpha = \frac{\dot{l}^2(t) + l(t)\ddot{l}(t) - a\Big(b\cos(\phi) - h\sin(\phi)\Big)\dot{\phi}^2}{a\Big(b\sin(\phi) + h\cos(\phi)\Big)}
 \end{equation}
 \]</div>
 <div class="cell docutils container">
@@ -876,6 +725,7 @@ b\cos(\phi)\dot{\phi}^2 + b\sin(\phi)\ddot{\phi} - h\sin(\phi)\dot{\phi}^2 + h\c
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2ldt2</span> <span class="o">=</span> <span class="n">dldt</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">dldt</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">l</span> <span class="o">*</span> <span class="n">d2ldt2</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span> <span class="o">*</span> <span class="n">omega</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> \
          <span class="o">/</span> <span class="n">a</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+
 <span class="n">alpha</span>
 </pre></div>
 </div>
