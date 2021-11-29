@@ -288,6 +288,52 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priklad-02-zdvihaci-rameno">
+   Příklad 02: Zdvihací rameno
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Řešení
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vypocet-natoceni-phi">
+     Výpočet natočení
+     <span class="math notranslate nohighlight">
+      \(\phi\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vypocet-uhlove-rychlosti-omega">
+     Výpočet úhlové rychlosti
+     <span class="math notranslate nohighlight">
+      \(\omega\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vypocet-uhloveho-zrychleni-alpha">
+     Výpočet úhlového zrychlení
+     <span class="math notranslate nohighlight">
+      \(\alpha\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zdvihova-zavislost-a-prevodove-funkce">
+     Zdvihová závislost a převodové funkce
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vykresleni-kinematickych-velicin">
+     Vykreslení kinematických veličin
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -549,6 +595,411 @@ v'_A = \omega R
 </pre></div>
 </div>
 <img alt="_images/mechanizmy_16_1.png" src="_images/mechanizmy_16_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="priklad-02-zdvihaci-rameno">
+<h2>Příklad 02: Zdvihací rameno<a class="headerlink" href="#priklad-02-zdvihaci-rameno" title="Permalink to this headline">¶</a></h2>
+<p>Uvažujte jednoduché robotické rameno podle obrázku.</p>
+<p align="center">
+<img src="obrazky/prednaska11/prednaska_priklad02_zadani.png" width=350/>
+</p>
+<p>Pro zadané parametry <span class="math notranslate nohighlight">\(a, b, c, d, L, T\)</span> a lineární servo pohon jehož předpis pro polohu je <span class="math notranslate nohighlight">\(l(t)=4L\frac{t}{T}(1 - \frac{t}{T})\)</span></p>
+<p><strong>určete:</strong></p>
+<ul class="simple">
+<li><p>a) průběh natočení <span class="math notranslate nohighlight">\(\phi\)</span> na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>b) průběh úhlové rychlosti <span class="math notranslate nohighlight">\(\omega\)</span> na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>c) průběh úlového zrychlení <span class="math notranslate nohighlight">\(\alpha\)</span> na čase <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>d) zdvihovou funkci <span class="math notranslate nohighlight">\(\Psi\)</span></p></li>
+<li><p>e) 1. převodou funkci <span class="math notranslate nohighlight">\(\mu\)</span></p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Řešení<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Nejdříve formulujeme globální a lokální polohové vektory:
+<span class="math notranslate nohighlight">\(r_L^G = \begin{bmatrix}0 \\ h \\ 0\end{bmatrix}\)</span>;
+<span class="math notranslate nohighlight">\(r_B^G = \begin{bmatrix}b \\ 0 \\ 0\end{bmatrix}\)</span>;
+<span class="math notranslate nohighlight">\(r_A^L = \begin{bmatrix}a \\ 0 \\ 0\end{bmatrix}\)</span>;
+<span class="math notranslate nohighlight">\(r_C^L = \begin{bmatrix}c \\ d \\ 0\end{bmatrix}\)</span></p>
+<p>Dále sestavíme vektorovu rovnici pro bod A v globálním SS:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+r_A^G = r_L^G + \mathrm{T}^{GL}r_A^L \tag{1}
+\end{equation}
+\]</div>
+</div>
+<div class="section" id="vypocet-natoceni-phi">
+<h3>Výpočet natočení <span class="math notranslate nohighlight">\(\phi\)</span><a class="headerlink" href="#vypocet-natoceni-phi" title="Permalink to this headline">¶</a></h3>
+<p>Abychom zohlednili proměnnou vzdálenost bodů A a B, předepsanou funkcí <span class="math notranslate nohighlight">\(l(t)\)</span>, formulujeme vektor <span class="math notranslate nohighlight">\(r_{AB}^G=r_A^G - r_B^G\)</span>. Snadno zjistíme, že:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+r_{AB}^G\cdot r_{AB}^G = l^2(l) \tag{2}
+\end{equation}
+\]</div>
+<p>A tedy platí, že rozšíření (1):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+r_A^G - r_B^G = r_L^G -r_B^G + \mathrm{T}^{GL}r_A^L \tag{3} 
+\end{equation}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="n">L</span><span class="p">,</span> <span class="n">T</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;L T&#39;</span><span class="p">)</span>
+<span class="n">phi</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;phi a b c d h t&#39;</span><span class="p">)</span>
+<span class="n">r_x</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+<span class="n">r_y</span> <span class="o">=</span> <span class="n">h</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+<span class="n">l</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">L</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="n">T</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span>
+
+<span class="n">eq2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">r_x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">r_y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">l</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+<span class="n">phi</span><span class="o">=</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># vyber reseni</span>
+<span class="n">phi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_152127</span><span class="o">/</span><span class="mf">956292419.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">eq2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">r_x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">r_y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">l</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">res</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">eq2</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">phi</span><span class="o">=</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># vyber reseni</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">phi</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">solve</span><span class="nt">(f, *symbols, **flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span>     <span class="c1">###########################################################################</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span>     <span class="k">if</span> <span class="n">bare_f</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>         <span class="n">solution</span> <span class="o">=</span> <span class="n">_solve</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">*</span><span class="n">symbols</span><span class="p">,</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>         <span class="n">solution</span> <span class="o">=</span> <span class="n">_solve_system</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">_solve</span><span class="nt">(f, *symbols, **flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1763</span>     <span class="k">if</span> <span class="n">check</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1764</span>         <span class="c1"># keep only results if the check is not False</span>
+<span class="ne">-&gt; </span><span class="mi">1765</span>         <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">result</span> <span class="k">if</span>
+<span class="g g-Whitespace">   </span><span class="mi">1766</span>                   <span class="n">checksol</span><span class="p">(</span><span class="n">f_num</span><span class="p">,</span> <span class="p">{</span><span class="n">symbol</span><span class="p">:</span> <span class="n">r</span><span class="p">},</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1767</span>     <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1764</span>         <span class="c1"># keep only results if the check is not False</span>
+<span class="g g-Whitespace">   </span><span class="mi">1765</span>         <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">result</span> <span class="k">if</span>
+<span class="ne">-&gt; </span><span class="mi">1766</span>                   <span class="n">checksol</span><span class="p">(</span><span class="n">f_num</span><span class="p">,</span> <span class="p">{</span><span class="n">symbol</span><span class="p">:</span> <span class="n">r</span><span class="p">},</span> <span class="o">**</span><span class="n">flags</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1767</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">1768</span> 
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/solvers/solvers.py</span> in <span class="ni">checksol</span><span class="nt">(f, symbol, sol, **flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span>             <span class="c1"># start over without the failed expanded form, possibly</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>             <span class="c1"># with a simplified solution</span>
+<span class="ne">--&gt; </span><span class="mi">305</span>             <span class="n">val</span> <span class="o">=</span> <span class="n">simplify</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sol</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>             <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;force&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>                 <span class="n">val</span><span class="p">,</span> <span class="n">reps</span> <span class="o">=</span> <span class="n">posify</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/simplify/simplify.py</span> in <span class="ni">simplify</span><span class="nt">(expr, ratio, measure, rational, inverse, doit, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">681</span> 
+<span class="g g-Whitespace">    </span><span class="mi">682</span>     <span class="n">short</span> <span class="o">=</span> <span class="n">shorter</span><span class="p">(</span><span class="n">powsimp</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">&#39;exp&#39;</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">powsimp</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="n">expr</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">683</span>     <span class="n">short</span> <span class="o">=</span> <span class="n">shorter</span><span class="p">(</span><span class="n">short</span><span class="p">,</span> <span class="n">cancel</span><span class="p">(</span><span class="n">short</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">684</span>     <span class="n">short</span> <span class="o">=</span> <span class="n">shorter</span><span class="p">(</span><span class="n">short</span><span class="p">,</span> <span class="n">factor_terms</span><span class="p">(</span><span class="n">short</span><span class="p">),</span> <span class="n">expand_power_exp</span><span class="p">(</span><span class="n">expand_mul</span><span class="p">(</span><span class="n">short</span><span class="p">)))</span>
+<span class="g g-Whitespace">    </span><span class="mi">685</span>     <span class="k">if</span> <span class="n">short</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">TrigonometricFunction</span><span class="p">,</span> <span class="n">HyperbolicFunction</span><span class="p">,</span> <span class="n">ExpBase</span><span class="p">):</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/polys/polytools.py</span> in <span class="ni">cancel</span><span class="nt">(f, *gens, **args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6618</span> 
+<span class="g g-Whitespace">   </span><span class="mi">6619</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">6620</span>         <span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="p">),</span> <span class="n">opt</span> <span class="o">=</span> <span class="n">parallel_poly_from_expr</span><span class="p">((</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">),</span> <span class="o">*</span><span class="n">gens</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6621</span>     <span class="k">except</span> <span class="n">PolificationFailed</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6622</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">)):</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/polys/polytools.py</span> in <span class="ni">parallel_poly_from_expr</span><span class="nt">(exprs, *gens, **args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4307</span>     <span class="sd">&quot;&quot;&quot;Construct polynomials from expressions. &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4308</span>     <span class="n">opt</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">build_options</span><span class="p">(</span><span class="n">gens</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">4309</span>     <span class="k">return</span> <span class="n">_parallel_poly_from_expr</span><span class="p">(</span><span class="n">exprs</span><span class="p">,</span> <span class="n">opt</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4310</span> 
+<span class="g g-Whitespace">   </span><span class="mi">4311</span> 
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/polys/polytools.py</span> in <span class="ni">_parallel_poly_from_expr</span><span class="nt">(exprs, opt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4346</span> 
+<span class="g g-Whitespace">   </span><span class="mi">4347</span>                 <span class="k">if</span> <span class="n">opt</span><span class="o">.</span><span class="n">expand</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">4348</span>                     <span class="n">expr</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">4349</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4350</span>             <span class="n">failed</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/cache.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">92</span>             <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">93</span>                 <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">94</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">cfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>                 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">expand</span><span class="nt">(self, deep, modulus, power_base, power_exp, mul, log, multinomial, basic, **hints)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3454</span>                     <span class="n">expr</span><span class="p">,</span> <span class="s1">&#39;_eval_expand_multinomial&#39;</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3455</span>             <span class="k">if</span> <span class="n">hints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mul&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">3456</span>                 <span class="n">expr</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3457</span>                     <span class="n">expr</span><span class="p">,</span> <span class="s1">&#39;_eval_expand_mul&#39;</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="n">deep</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3458</span>             <span class="k">if</span> <span class="n">hints</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3379</span>             <span class="n">sargs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">   </span><span class="mi">3380</span>             <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">expr</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3381</span>                 <span class="n">arg</span><span class="p">,</span> <span class="n">arghit</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">hint</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3382</span>                 <span class="n">hit</span> <span class="o">|=</span> <span class="n">arghit</span>
+<span class="g g-Whitespace">   </span><span class="mi">3383</span>                 <span class="n">sargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3379</span>             <span class="n">sargs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">   </span><span class="mi">3380</span>             <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">expr</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3381</span>                 <span class="n">arg</span><span class="p">,</span> <span class="n">arghit</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">hint</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3382</span>                 <span class="n">hit</span> <span class="o">|=</span> <span class="n">arghit</span>
+<span class="g g-Whitespace">   </span><span class="mi">3383</span>                 <span class="n">sargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3379</span>             <span class="n">sargs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">   </span><span class="mi">3380</span>             <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">expr</span><span class="o">.</span><span class="n">args</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3381</span>                 <span class="n">arg</span><span class="p">,</span> <span class="n">arghit</span> <span class="o">=</span> <span class="n">Expr</span><span class="o">.</span><span class="n">_expand_hint</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">hint</span><span class="p">,</span> <span class="o">**</span><span class="n">hints</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3382</span>                 <span class="n">hit</span> <span class="o">|=</span> <span class="n">arghit</span>
+<span class="g g-Whitespace">   </span><span class="mi">3383</span>                 <span class="n">sargs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/expr.py</span> in <span class="ni">_expand_hint</span><span class="nt">(expr, hint, deep, **hints)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3387</span> 
+<span class="g g-Whitespace">   </span><span class="mi">3388</span>         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">3389</span>             <span class="n">newexpr</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">hint</span><span class="p">)(</span><span class="o">**</span><span class="n">hints</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3390</span>             <span class="k">if</span> <span class="n">newexpr</span> <span class="o">!=</span> <span class="n">expr</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3391</span>                 <span class="k">return</span> <span class="p">(</span><span class="n">newexpr</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">_eval_expand_mul</span><span class="nt">(self, **hints)</span>
+<span class="g g-Whitespace">    </span><span class="mi">891</span>                 <span class="n">args</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">892</span>                 <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">terms</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">893</span>                     <span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">plain</span><span class="p">,</span> <span class="n">term</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">894</span>                     <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">is_Mul</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">is_Add</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">args</span><span class="p">)</span> <span class="ow">and</span> <span class="n">deep</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">895</span>                         <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">_eval_expand_mul</span><span class="p">()</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/cache.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">92</span>             <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">93</span>                 <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">94</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">cfunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>                 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>                     <span class="n">retval</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/operations.py</span> in <span class="ni">__new__</span><span class="nt">(cls, *args, **options)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span>             <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> 
+<span class="ne">---&gt; </span><span class="mi">47</span>         <span class="n">c_part</span><span class="p">,</span> <span class="n">nc_part</span><span class="p">,</span> <span class="n">order_symbols</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="n">is_commutative</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">nc_part</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="n">obj</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_from_args</span><span class="p">(</span><span class="n">c_part</span> <span class="o">+</span> <span class="n">nc_part</span><span class="p">,</span> <span class="n">is_commutative</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">flatten</span><span class="nt">(cls, seq)</span>
+<span class="g g-Whitespace">    </span><span class="mi">399</span> 
+<span class="g g-Whitespace">    </span><span class="mi">400</span>         <span class="c1"># in c_powers</span>
+<span class="ne">--&gt; </span><span class="mi">401</span>         <span class="n">c_powers</span> <span class="o">=</span> <span class="n">_gather</span><span class="p">(</span><span class="n">c_powers</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">402</span> 
+<span class="g g-Whitespace">    </span><span class="mi">403</span>         <span class="c1"># and in num_exp</span>
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">_gather</span><span class="nt">(c_powers)</span>
+<span class="g g-Whitespace">    </span><span class="mi">395</span>             <span class="n">new_c_powers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">396</span>             <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">common_b</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="nn">--&gt; 397                 new_c_powers.extend([(b, c*t) for t, c</span> in <span class="ni">e.items</span><span class="nt">()])</span>
+<span class="g g-Whitespace">    </span><span class="mi">398</span>             <span class="k">return</span> <span class="n">new_c_powers</span>
+<span class="g g-Whitespace">    </span><span class="mi">399</span> 
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/mul.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">395</span>             <span class="n">new_c_powers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">    </span><span class="mi">396</span>             <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">common_b</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="nn">--&gt; 397                 new_c_powers.extend([(b, c*t) for t, c</span> in <span class="ni">e.items</span><span class="nt">()])</span>
+<span class="g g-Whitespace">    </span><span class="mi">398</span>             <span class="k">return</span> <span class="n">new_c_powers</span>
+<span class="g g-Whitespace">    </span><span class="mi">399</span> 
+
+<span class="nn">/usr/lib/python3/dist-packages/sympy/core/numbers.py</span> in <span class="ni">__mul__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2203</span>         <span class="k">return</span> <span class="n">Rational</span><span class="o">.</span><span class="fm">__rsub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2204</span> 
+<span class="ne">-&gt; </span><span class="mi">2205</span>     <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2206</span>         <span class="k">if</span> <span class="n">global_evaluate</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2207</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">integer_types</span><span class="p">):</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vypocet-uhlove-rychlosti-omega">
+<h3>Výpočet úhlové rychlosti <span class="math notranslate nohighlight">\(\omega\)</span><a class="headerlink" href="#vypocet-uhlove-rychlosti-omega" title="Permalink to this headline">¶</a></h3>
+<p>Přepíšeme rovnici (4) na:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+-b\cos(\phi) + h\sin(\phi) = \frac{l^2(t) - a^2 - b^2 - h^2}{2a}
+\end{equation}
+\]</div>
+<p>a implicitně zderivujeme:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+b\sin(\phi)\dot{\phi} + h\cos(\phi)\dot{\phi} = \frac{l}{a}\dot{l}(t \rightarrow \dot{\phi} = \frac{l(t)}{a(b\sin(\phi)+h\cos(\phi))}\dot{l}(t) \tag{5}
+\end{equation}
+\]</div>
+<p>kde <span class="math notranslate nohighlight">\(\dot{l}(t) = \frac{4L}{T}(1-2\frac{t}{T})\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dldt</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">dldt</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+<span class="n">dldt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{4 L \left(1.0 - \frac{t}{T}\right)}{T} - \frac{4 L t}{T^{2}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">omega</span> <span class="o">=</span> <span class="n">l</span> <span class="o">/</span> <span class="n">a</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span> <span class="o">*</span> <span class="n">dldt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vypocet-uhloveho-zrychleni-alpha">
+<h3>Výpočet úhlového zrychlení <span class="math notranslate nohighlight">\(\alpha\)</span><a class="headerlink" href="#vypocet-uhloveho-zrychleni-alpha" title="Permalink to this headline">¶</a></h3>
+<p>Opět implicitně zderivujeme výraz (5):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+b\cos(\phi)\dot{\phi}^2 + b\sin(\phi)\ddot{\phi} - h\sin(\phi)\dot{\phi}^2 + h\cos(\phi)\ddot{\phi} = \frac{1}{a}\Big(\dot{l}^2(t) + l(t)\ddot{l}(t)\Big) \rightarrow \alpha = \frac{\dot{l}^2(t) + l(t)\ddot{l}(t) - a\Big(b\cos(\phi) - h\sin(\phi)\Big)\dot{\phi}^2}{a\Big(b\sin(\phi) + h\cos(\phi)\Big)}
+\end{equation}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2ldt2</span> <span class="o">=</span> <span class="n">dldt</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">dldt</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">l</span> <span class="o">*</span> <span class="n">d2ldt2</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span> <span class="o">*</span> <span class="n">omega</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> \
+         <span class="o">/</span> <span class="n">a</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+<span class="n">alpha</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{- \frac{16 L^{2} t^{2} \left(1.0 - \frac{t}{T}\right)^{2} \left(b \cos{\left(2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)} \right)} + h \sin{\left(2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)} \right)}\right) \left(\frac{4 L \left(1.0 - \frac{t}{T}\right)}{T} - \frac{4 L t}{T^{2}}\right)^{2}}{T^{2} a \left(- b \sin{\left(2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)} \right)} + h \cos{\left(2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)} \right)}\right)^{2}} - \frac{32 L^{2} t \left(1.0 - \frac{t}{T}\right)}{T^{3}} + \left(\frac{4 L \left(1.0 - \frac{t}{T}\right)}{T} - \frac{4 L t}{T^{2}}\right)^{2}}{a \left(- b \sin{\left(2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)} \right)} + h \cos{\left(2.0 \operatorname{atan}{\left(\frac{2.0 T^{4} a h - 39.1918358845308 \sqrt{- 0.166666666666667 L^{4} T^{4} t^{4} + 0.666666666666667 L^{4} T^{3} t^{5} - L^{4} T^{2} t^{6} + 0.666666666666667 L^{4} T t^{7} - 0.166666666666667 L^{4} t^{8} + 0.0208333333333333 L^{2} T^{6} a^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} b^{2} t^{2} + 0.0208333333333333 L^{2} T^{6} h^{2} t^{2} - 0.0416666666666667 L^{2} T^{5} a^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} b^{2} t^{3} - 0.0416666666666667 L^{2} T^{5} h^{2} t^{3} + 0.0208333333333333 L^{2} T^{4} a^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} b^{2} t^{4} + 0.0208333333333333 L^{2} T^{4} h^{2} t^{4} - 0.000651041666666667 T^{8} a^{4} + 0.00130208333333333 T^{8} a^{2} b^{2} + 0.00130208333333333 T^{8} a^{2} h^{2} - 0.000651041666666667 T^{8} b^{4} - 0.00130208333333333 T^{8} b^{2} h^{2} - 0.000651041666666667 T^{8} h^{4}}}{- 16.0 L^{2} T^{2} t^{2} + 32.0 L^{2} T t^{3} - 16.0 L^{2} t^{4} + T^{4} a^{2} + 2.0 T^{4} a b + T^{4} b^{2} + T^{4} h^{2}} \right)} \right)}\right)}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="zdvihova-zavislost-a-prevodove-funkce">
+<h3>Zdvihová závislost a převodové funkce<a class="headerlink" href="#zdvihova-zavislost-a-prevodove-funkce" title="Permalink to this headline">¶</a></h3>
+<p>Zdvihová závilost <span class="math notranslate nohighlight">\(\phi(l)\)</span> je přímo výraz pro <span class="math notranslate nohighlight">\(\Psi\)</span>. Převodovou funkci <span class="math notranslate nohighlight">\(\mu = \frac{d\phi}{dl}\)</span> nalezneme snadno z (4):</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+b\sin(\phi)\frac{d\phi}{dl} + h\cos(\phi)\frac{d\phi}{dl} = \frac{2l(t)}{2a}
+\end{equation}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
+\frac{d\phi}{dl} = \frac{l(t)}{a\Big(b\sin(\phi) + h\cos(\phi)\Big)} \tag{6}
+\end{equation}
+\]</div>
+</div>
+<div class="section" id="vykresleni-kinematickych-velicin">
+<h3>Vykreslení kinematických veličin<a class="headerlink" href="#vykresleni-kinematickych-velicin" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">a_num</span><span class="p">,</span> <span class="n">b_num</span><span class="p">,</span> <span class="n">c_num</span><span class="p">,</span> <span class="n">d_num</span><span class="p">,</span> <span class="n">h_num</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="n">T_num</span><span class="p">,</span> <span class="n">L_num</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span>
+<span class="n">tn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+
+<span class="n">pp</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="n">a_num</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="n">b_num</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="n">c_num</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span><span class="n">d_num</span><span class="p">,</span> <span class="n">h</span><span class="p">:</span><span class="n">h_num</span><span class="p">,</span> <span class="n">T</span><span class="p">:</span><span class="n">T_num</span><span class="p">,</span> <span class="n">L</span><span class="p">:</span><span class="n">L_num</span><span class="p">}</span>
+<span class="n">phin</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">phi</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">pp</span><span class="p">))</span>
+<span class="n">omegan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">omega</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">pp</span><span class="p">))</span>
+<span class="n">alphan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">alpha</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">pp</span><span class="p">))</span>
+<span class="n">ln</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">l</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">pp</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1080x360 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">ln</span><span class="p">(</span><span class="n">tn</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Zdvihova funkce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Zdvihova funkce&#39;)
+</pre></div>
+</div>
+<img alt="_images/mechanizmy_33_1.png" src="_images/mechanizmy_33_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">phin</span><span class="p">(</span><span class="n">tn</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;natoceni&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;natoceni&#39;)
+</pre></div>
+</div>
+<img alt="_images/mechanizmy_34_1.png" src="_images/mechanizmy_34_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">omegan</span><span class="p">(</span><span class="n">tn</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;uhlova rychlost&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;uhlova rychlost&#39;)
+</pre></div>
+</div>
+<img alt="_images/mechanizmy_35_1.png" src="_images/mechanizmy_35_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">alphan</span><span class="p">(</span><span class="n">tn</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;uhlove zrychleni&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;uhlove zrychleni&#39;)
+</pre></div>
+</div>
+<img alt="_images/mechanizmy_36_1.png" src="_images/mechanizmy_36_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dphidl</span> <span class="o">=</span> <span class="n">l</span> <span class="o">/</span> <span class="n">a</span> <span class="o">/</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">phi</span><span class="p">))</span>
+<span class="n">dphidln</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dphidl</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">pp</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tn</span><span class="p">,</span> <span class="n">dphidln</span><span class="p">(</span><span class="n">tn</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;prvni prevodova funkce&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;prvni prevodova funkce&#39;)
+</pre></div>
+</div>
+<img alt="_images/mechanizmy_37_1.png" src="_images/mechanizmy_37_1.png" />
 </div>
 </div>
 </div>
