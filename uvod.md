@@ -8,13 +8,19 @@ Přednášky vede *Petr Henyš*:
 - konzultační hodiny: po domluvě
 - kancelář: budova A, A04031
 
-Cvičení akademický rok 2021/2022 vede *Václav Vomáčko* a *Gleb Pokatilov*.
+Cvičení akademický rok 2022/2023 vede *Václav Vomáčko* a *Gleb Pokatilov*.
+```{admonition} Zkrácený semestr
+:class: warning
+Vzhledem k současné situaci, zimní semestr bude zkrácen na 13 týdnů a pravděpodobně se nestihnou přednášky a cvičení v poslední části dynamiky. Bude zohledněno při udělování zápočtu a u zkoušky.
+```
+
+
 
 ## Pravidla pro udělení zápočtu
 Během semestru se budou psát tři testy, vždy po ukončení daného tématu v následujících týdnech:
 - **5** týden - Statika
 - **9** týden - Kinematika
-- **13** týden - Dynamika
+- **13** týden - Dynamika (nebude tento semestr)
 
 
 ```{admonition} Varování
