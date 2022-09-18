@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Vnitřní statické účinky - metoda řezu (☕☕) &#8212; Technické mechanika</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,39 +20,38 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Vniřní statické účinky - Šwedlerovy věty (☕☕)" href="vsu-swedler.html" />
@@ -62,7 +63,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +86,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +107,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="uvod.html">
-   Informace o předmětu
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="uvod.html">
+                    Informace o předmětu
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Statika
  </span>
@@ -135,7 +152,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Kinematika
  </span>
@@ -149,110 +166,227 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/vsu-rez.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/petr-henys/TME"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/petr-henys/TME/issues/new?title=Issue%20on%20page%20%2Fvsu-rez.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/petr-henys/TME/master?urlpath=tree/vsu-rez.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/petr-henys/TME/master?urlpath=tree/vsu-rez.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/petr-henys/TME"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/petr-henys/TME/issues/new?title=Issue%20on%20page%20%2Fvsu-rez.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/vsu-rez.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#postup">
    Postup
@@ -327,32 +461,122 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Vnitřní statické účinky - metoda řezu (☕☕)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#postup">
+   Postup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#priklad">
+   Příklad
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reseni">
+   Řešení
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rez-c-1-x-in-0-a">
+     Řez č.1:
+     <span class="math notranslate nohighlight">
+      \(x\in &lt;0, a&gt;\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rez-c-2-x-in-a-a-b">
+     Řez č.2:
+     <span class="math notranslate nohighlight">
+      \(x\in &lt;a, a+b&gt;\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rez-c-3-x-in-a-b-a-b-c">
+     Řez č.3:
+     <span class="math notranslate nohighlight">
+      \(x\in &lt;a+b, a+b+c&gt;\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyza-vysledku">
+   Analýza výsledků
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prubeh-posouvajici-sily-n">
+     Průběh posouvající síly
+     <span class="math notranslate nohighlight">
+      \(N\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prubeh-tecne-sily-q">
+     Průběh tečné síly
+     <span class="math notranslate nohighlight">
+      \(Q\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prubeh-ohyboveho-momentu-m">
+     Průběh ohybového momentu
+     <span class="math notranslate nohighlight">
+      \(M\)
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="vnitrni-staticke-ucinky-metoda-rezu">
-<h1>Vnitřní statické účinky - metoda řezu (☕☕)<a class="headerlink" href="#vnitrni-staticke-ucinky-metoda-rezu" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="vnitrni-staticke-ucinky-metoda-rezu">
+<h1>Vnitřní statické účinky - metoda řezu (☕☕)<a class="headerlink" href="#vnitrni-staticke-ucinky-metoda-rezu" title="Permalink to this headline">#</a></h1>
 <p>Vnitřní statické účinky (VSU) jsou silové účinky v tělese. Budeme je studovat tak, že provedeme řez tělesem a vmístě řezu zavedeme odpovídající VSU podle obrázku.</p>
 <p align="center">
 <img src="obrazky/prednaska07/VSU_postup.png" width=700/>
 </p>
 <p>podle počtu stupňů volnosit zavedeme posouvající sílu <span class="math notranslate nohighlight">\(N\)</span>, která je popisuje podélnou sílu v tělese. Dále zavedeme tečnou sílu <span class="math notranslate nohighlight">\(Q\)</span>, která popisuje střižnou sílu a nakonec ohybový moment <span class="math notranslate nohighlight">\(M\)</span>. Kladný směr volíme libovolně(opět platí, že musíme dodržovat po celý výpočet), ale doporučeno je zavádět orinetaci podle obrázku.</p>
-<div class="section" id="postup">
-<h2>Postup<a class="headerlink" href="#postup" title="Permalink to this headline">¶</a></h2>
+<section id="postup">
+<h2>Postup<a class="headerlink" href="#postup" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Nejdříve analyzujeme zatížení nosníku a napíšeme vnější rovnice rovnováhy uvolněním nosníku a nahrazením uložení odpovídajícími reakcemi.</p></li>
 <li><p>Řezy se provádějí v místech kde dochází ke změně, tj. působiště osamocené síly, uložení nebo spojitého zatížení (začátek, či konec), viz obrázek se třemi řezy.</p></li>
 <li><p>Ke každému řezu napíšeme rovnice rovnováhy a určíme platnost řezu.</p></li>
 </ul>
-</div>
-<div class="section" id="priklad">
-<h2>Příklad<a class="headerlink" href="#priklad" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="priklad">
+<h2>Příklad<a class="headerlink" href="#priklad" title="Permalink to this headline">#</a></h2>
 <p>Analyzujte průběh tahových/tlakových a střihových sil a ohybového momentu tenkého nosníku prostě podepřeného a zatíženého osamělými silami. Síla <span class="math notranslate nohighlight">\(F_1=500\)</span> N je pod sklonem <span class="math notranslate nohighlight">\(\alpha=45°\)</span>, síla <span class="math notranslate nohighlight">\(F_2=250\)</span> N. Vzdálenosti jsou: <span class="math notranslate nohighlight">\(a=0.2\)</span> m, <span class="math notranslate nohighlight">\(b=0.65\)</span> m a <span class="math notranslate nohighlight">\(c=0.4\)</span> m.</p>
 <p align="center">
 <img src="obrazky/prednaska07/priklad01_zadani.png" width=400/>
@@ -362,9 +586,9 @@
 <li><p>a) Průběhy <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(Q\)</span> a <span class="math notranslate nohighlight">\(M\)</span> podél nosníku</p></li>
 <li><p>b) Maximální a minimální hodnoty VSÚ</p></li>
 </ul>
-</div>
-<div class="section" id="reseni">
-<h2>Řešení<a class="headerlink" href="#reseni" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reseni">
+<h2>Řešení<a class="headerlink" href="#reseni" title="Permalink to this headline">#</a></h2>
 <p>Nejprve uvolníme nosník, zavedeme reakce a určíme PSV.</p>
 <p align="center">
     <img src="obrazky/prednaska07/priklad01_uvolneni.png" width=400/>
@@ -439,8 +663,8 @@ y\uparrow:&amp; R_{Ay} + R_{By} - F_2 - F_1\sin(\alpha)=0  \\
 \[\displaystyle \frac{F_{1} a \sin{\left(\alpha \right)} + F_{2} a + F_{2} b}{a + b + c}\]</div>
 </div>
 </div>
-<div class="section" id="rez-c-1-x-in-0-a">
-<h3>Řez č.1: <span class="math notranslate nohighlight">\(x\in &lt;0, a&gt;\)</span><a class="headerlink" href="#rez-c-1-x-in-0-a" title="Permalink to this headline">¶</a></h3>
+<section id="rez-c-1-x-in-0-a">
+<h3>Řez č.1: <span class="math notranslate nohighlight">\(x\in &lt;0, a&gt;\)</span><a class="headerlink" href="#rez-c-1-x-in-0-a" title="Permalink to this headline">#</a></h3>
 <p align="center">
     <img src="obrazky/prednaska07/priklad01_rez1.png" width=120/>
 </p><div class="math notranslate nohighlight">
@@ -501,12 +725,12 @@ y\uparrow:&amp; -Q_1 + R_{Ay}=0 \\
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \frac{x \left(F_{1} b \sin{\left(\alpha \right)} + F_{1} c \sin{\left(\alpha \right)} + F_{2} c\right)}{a + b + c}\]</div>
+\[\displaystyle \frac{F_{1} b x \sin{\left(\alpha \right)} + F_{1} c x \sin{\left(\alpha \right)} + F_{2} c x}{a + b + c}\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="rez-c-2-x-in-a-a-b">
-<h3>Řez č.2: <span class="math notranslate nohighlight">\(x\in &lt;a, a+b&gt;\)</span><a class="headerlink" href="#rez-c-2-x-in-a-a-b" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rez-c-2-x-in-a-a-b">
+<h3>Řez č.2: <span class="math notranslate nohighlight">\(x\in &lt;a, a+b&gt;\)</span><a class="headerlink" href="#rez-c-2-x-in-a-a-b" title="Permalink to this headline">#</a></h3>
 <p align="center">
     <img src="obrazky/prednaska07/priklad01_rez2.png" width=200/>
 </p><div class="math notranslate nohighlight">
@@ -570,9 +794,9 @@ y\uparrow:&amp; R_{Ay}-Q_2-F_1\sin(\alpha)=0 \\
 \[\displaystyle \frac{F_{1} a^{2} \sin{\left(\alpha \right)} + F_{1} a b \sin{\left(\alpha \right)} + F_{1} a c \sin{\left(\alpha \right)} - F_{1} a x \sin{\left(\alpha \right)} + F_{2} c x}{a + b + c}\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="rez-c-3-x-in-a-b-a-b-c">
-<h3>Řez č.3: <span class="math notranslate nohighlight">\(x\in &lt;a+b, a+b+c&gt;\)</span><a class="headerlink" href="#rez-c-3-x-in-a-b-a-b-c" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rez-c-3-x-in-a-b-a-b-c">
+<h3>Řez č.3: <span class="math notranslate nohighlight">\(x\in &lt;a+b, a+b+c&gt;\)</span><a class="headerlink" href="#rez-c-3-x-in-a-b-a-b-c" title="Permalink to this headline">#</a></h3>
 <p align="center">
     <img src="obrazky/prednaska07/priklad01_rez3.png" width=330/>
 </p><div class="math notranslate nohighlight">
@@ -622,7 +846,7 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle - \frac{F_{1} a \sin{\left(\alpha \right)} + F_{2} a + F_{2} b}{a + b + c}\]</div>
+\[\displaystyle \frac{- F_{1} a \sin{\left(\alpha \right)} - F_{2} a - F_{2} b}{a + b + c}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -636,10 +860,10 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 \[\displaystyle \frac{F_{1} a^{2} \sin{\left(\alpha \right)} + F_{1} a b \sin{\left(\alpha \right)} + F_{1} a c \sin{\left(\alpha \right)} - F_{1} a x \sin{\left(\alpha \right)} + F_{2} a^{2} + 2 F_{2} a b + F_{2} a c - F_{2} a x + F_{2} b^{2} + F_{2} b c - F_{2} b x}{a + b + c}\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="analyza-vysledku">
-<h2>Analýza výsledků<a class="headerlink" href="#analyza-vysledku" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="analyza-vysledku">
+<h2>Analýza výsledků<a class="headerlink" href="#analyza-vysledku" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nahrajeme knihovnu na kresleni grafu a nastavime ji</span>
@@ -655,8 +879,8 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 </div>
 </div>
 </div>
-<div class="section" id="prubeh-posouvajici-sily-n">
-<h3>Průběh posouvající síly <span class="math notranslate nohighlight">\(N\)</span><a class="headerlink" href="#prubeh-posouvajici-sily-n" title="Permalink to this headline">¶</a></h3>
+<section id="prubeh-posouvajici-sily-n">
+<h3>Průběh posouvající síly <span class="math notranslate nohighlight">\(N\)</span><a class="headerlink" href="#prubeh-posouvajici-sily-n" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prevedeme symboliku na numeriku</span>
@@ -685,12 +909,15 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/vsu-rez_34_0.png" src="_images/vsu-rez_34_0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>findfont: Font family [&#39;xkcd&#39;, &#39;xkcd Script&#39;, &#39;Humor Sans&#39;, &#39;Comic Neue&#39;, &#39;Comic Sans MS&#39;, &#39;StayPuft&#39;] not found. Falling back to DejaVu Sans.
+</pre></div>
+</div>
+<img alt="_images/vsu-rez_34_1.png" src="_images/vsu-rez_34_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="prubeh-tecne-sily-q">
-<h3>Průběh tečné síly <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#prubeh-tecne-sily-q" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="prubeh-tecne-sily-q">
+<h3>Průběh tečné síly <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#prubeh-tecne-sily-q" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q1num</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Q1</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">F1</span><span class="p">:</span><span class="n">F1num</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span><span class="n">alphanum</span><span class="p">,</span> <span class="n">F2</span><span class="p">:</span><span class="n">F2num</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span><span class="n">anum</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="n">bnum</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="n">cnum</span><span class="p">}))</span>
@@ -715,9 +942,9 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 <img alt="_images/vsu-rez_36_0.png" src="_images/vsu-rez_36_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="prubeh-ohyboveho-momentu-m">
-<h3>Průběh ohybového momentu <span class="math notranslate nohighlight">\(M\)</span><a class="headerlink" href="#prubeh-ohyboveho-momentu-m" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="prubeh-ohyboveho-momentu-m">
+<h3>Průběh ohybového momentu <span class="math notranslate nohighlight">\(M\)</span><a class="headerlink" href="#prubeh-ohyboveho-momentu-m" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M1num</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">M1</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">F1</span><span class="p">:</span><span class="n">F1num</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span><span class="n">alphanum</span><span class="p">,</span> <span class="n">F2</span><span class="p">:</span><span class="n">F2num</span><span class="p">,</span> <span class="n">a</span><span class="p">:</span><span class="n">anum</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="n">bnum</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span><span class="n">cnum</span><span class="p">}))</span>
@@ -742,9 +969,9 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 <img alt="_images/vsu-rez_38_0.png" src="_images/vsu-rez_38_0.png" />
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -768,9 +995,11 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="statika_hb.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -786,26 +1015,28 @@ y\uparrow:&amp; R_{Ay}-Q_3-F_1\sin(\alpha) - F_2=0 \\
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Petr Henyš<br/>
-        
-            &copy; Copyright Petr Henyš.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Petr Henyš<br/>
+  
+      &copy; Copyright Petr Henyš.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

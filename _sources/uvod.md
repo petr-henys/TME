@@ -8,7 +8,7 @@ Přednášky vede *Petr Henyš*:
 - konzultační hodiny: po domluvě
 - kancelář: budova A, A04031
 
-Cvičení akademický rok 2021/2022 vede *Václav Vomáčko* a *Jakub Macháček*.
+Cvičení akademický rok 2021/2022 vede *Václav Vomáčko* a *Gleb Pokatilov*.
 
 ## Pravidla pro udělení zápočtu
 Během semestru se budou psát tři testy, vždy po ukončení daného tématu v následujících týdnech:
